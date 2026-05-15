@@ -1,0 +1,62 @@
+# GitHub-Action: Wöchentlich neuen Artikel generieren + Vorschau-Mail versenden
+#
+# AKTIVIERUNG (nur wenn du auf GitHub umziehen willst):
+#   1. Repo auf GitHub anlegen
+#   2. Settings → Secrets and variables → Actions
+#   3. Zwei Repository Secrets anlegen:
+#        GEMINI_API_KEY  = ... (von aistudio.google.com/app/apikey)
+#        RESEND_API_KEY  = re_...
+#   4. Diese Datei aktivieren (sie läuft dann automatisch jeden Montag 8:00 Uhr UTC)
+#
+# Solange das Repo nur lokal liegt, macht diese Datei nichts.
+
+name: Weekly Article Generation
+
+on:
+  schedule:
+    # Jeden Montag 8:00 Uhr UTC (= 09:00/10:00 Uhr DE je nach Sommerzeit)
+    - cron: "0 8 * * 1"
+  workflow_dispatch:  # auch manuell triggerbar
+
+jobs:
+  generate-and-send:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # damit der Bot den Status in topics.md committen kann
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install google-generativeai requests
+
+      - name: Generate next article
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          cd automation
+          python3 generate.py
+
+      - name: Send preview email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          REVIEWER_EMAIL: a.braemswig@rehab-five.com
+          FROM_EMAIL: onboarding@resend.dev
+        run: |
+          cd automation
+          python3 send-preview.py
+
+      - name: Commit draft + topics-status update
+        run: |
+          git config user.name "REHAB FIVE Bot"
+          git config user.email "bot@rehab-five-health-club.com"
+          git add automation/topics.md automation/drafts/
+          git commit -m "🤖 Auto-Draft: nächster Wissens-Artikel" || echo "nothing to commit"
+          git push
