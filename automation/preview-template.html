@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{TITLE}} · Artikel-Vorschau</title>
+</head>
+<body style="margin:0;padding:0;background:#F5F4F0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1A1A1A;">
+
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#F5F4F0;padding:24px 0;">
+  <tr>
+    <td align="center">
+
+      <table role="presentation" width="620" cellspacing="0" cellpadding="0" border="0" style="max-width:620px;width:100%;background:#FFFFFF;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px -8px rgba(26,26,26,0.10);">
+
+        <!-- ===== Header: forest ===== -->
+        <tr>
+          <td style="background:#1F342D;padding:32px 32px 28px 32px;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td style="color:#D99129;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;">
+                  REHAB FIVE HEALTH CLUB · Neuer Artikel zur Freigabe
+                </td>
+              </tr>
+              <tr>
+                <td style="color:#ffffff;font-size:22px;font-weight:700;letter-spacing:-0.01em;padding-top:14px;line-height:1.25;">
+                  {{TITLE}}
+                </td>
+              </tr>
+              <tr>
+                <td style="color:rgba(255,255,255,0.75);font-size:13px;padding-top:10px;">
+                  Themen-ID: <strong style="color:#ffffff;">{{TOPIC_ID}}</strong>
+                  &nbsp;·&nbsp; Slug: <code style="color:#ffffff;">{{SLUG}}</code>
+                  &nbsp;·&nbsp; {{DATE}}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ===== Status-Strip ===== -->
+        <tr>
+          <td style="background:#FBF1E0;padding:14px 32px;border-bottom:1px solid #E6E3DC;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td style="color:#A66819;font-size:13px;font-weight:600;">
+                  ⏳ Wartet auf deine Lesefreigabe
+                </td>
+                <td align="right" style="color:#4A4A4A;font-size:12px;">
+                  Wortanzahl: ~{{WORDCOUNT}} · Lesezeit: ~{{READTIME}} Min.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ===== Vorschau-Block ===== -->
+        <tr>
+          <td style="padding:32px;">
+
+            <p style="margin:0 0 16px 0;color:#4A4A4A;font-size:14px;">
+              Unten findest du eine kompakte Vorschau des Artikels. Die volle HTML-Datei
+              hängt als Anhang.
+            </p>
+
+            <!-- Lead -->
+            <div style="border-left:3px solid #D99129;padding:6px 0 6px 16px;margin:24px 0;">
+              <p style="margin:0;color:#1A1A1A;font-size:16px;line-height:1.55;font-weight:500;">
+                {{LEAD}}
+              </p>
+            </div>
+
+            <!-- Quick-Answer -->
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#FBF1E0;border-radius:12px;margin:24px 0;">
+              <tr>
+                <td style="padding:20px 22px;">
+                  <p style="margin:0 0 6px 0;color:#A66819;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;">
+                    Quick-Answer-Box
+                  </p>
+                  <p style="margin:0;color:#1A1A1A;font-size:15px;line-height:1.6;">
+                    {{QUICK_ANSWER}}
+                  </p>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Outline -->
+            <p style="margin:24px 0 10px 0;color:#1F342D;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;">
+              Inhalts-Outline
+            </p>
+            <ul style="margin:0;padding-left:20px;color:#2A2A2F;font-size:14px;line-height:1.7;">
+              {{OUTLINE_ITEMS}}
+            </ul>
+
+            <!-- FAQ -->
+            <p style="margin:28px 0 10px 0;color:#1F342D;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;">
+              FAQ-Fragen ({{FAQ_COUNT}})
+            </p>
+            <ol style="margin:0;padding-left:24px;color:#2A2A2F;font-size:14px;line-height:1.7;">
+              {{FAQ_ITEMS}}
+            </ol>
+
+            <!-- ===== Freigabe ===== -->
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top:36px;border-top:1px solid #E6E3DC;padding-top:28px;">
+              <tr>
+                <td>
+                  <p style="margin:0 0 14px 0;color:#1A1A1A;font-size:16px;font-weight:700;">
+                    So gibst du den Artikel frei
+                  </p>
+                  <p style="margin:0 0 18px 0;color:#4A4A4A;font-size:14px;line-height:1.6;">
+                    Antworte auf diese Mail mit einem dieser Codes:
+                  </p>
+
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 18px 0;">
+                    <tr>
+                      <td style="padding-right:12px;">
+                        <code style="background:#1F342D;color:#D99129;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:700;letter-spacing:0.04em;">go</code>
+                      </td>
+                      <td style="color:#4A4A4A;font-size:14px;">
+                        → Artikel wird online gestellt (Push auf /wissen/{{SLUG}}/)
+                      </td>
+                    </tr>
+                    <tr><td colspan="2" style="height:10px;"></td></tr>
+                    <tr>
+                      <td style="padding-right:12px;">
+                        <code style="background:#1A1A1A;color:#ffffff;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:700;letter-spacing:0.04em;">fix</code>
+                      </td>
+                      <td style="color:#4A4A4A;font-size:14px;">
+                        → Artikel zurück in 'idea', neu schreiben mit deinem Feedback
+                      </td>
+                    </tr>
+                    <tr><td colspan="2" style="height:10px;"></td></tr>
+                    <tr>
+                      <td style="padding-right:12px;">
+                        <code style="background:#C9C9C9;color:#1A1A1A;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:700;letter-spacing:0.04em;">skip</code>
+                      </td>
+                      <td style="color:#4A4A4A;font-size:14px;">
+                        → Artikel verwerfen, Thema überspringen
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p style="margin:18px 0 0 0;color:#4A4A4A;font-size:12px;line-height:1.55;">
+                    Alternativ: Datei <code>{{DRAFT_FILENAME}}</code> liegt im automation/drafts/-Ordner.
+                    Manueller Publish: <code>python3 publish.py {{DRAFT_FILENAME}}</code>
+                  </p>
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- ===== Footer ===== -->
+        <tr>
+          <td style="background:#FAFAFA;padding:18px 32px;border-top:1px solid #E6E3DC;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td style="color:#4A4A4A;font-size:11px;line-height:1.5;">
+                  Automatisch generiert vom REHAB FIVE HEALTH CLUB Artikel-Generator.<br>
+                  Domain: rehab-five-health-club.com · Made in Münster.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

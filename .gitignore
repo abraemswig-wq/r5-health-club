@@ -1,0 +1,14 @@
+# Automation API-Keys
+automation/.env
+automation/drafts/*.html
+automation/drafts/*.meta
+automation/published/
+automation/logs/
+automation/_build.py
+
+# macOS
+.DS_Store
+
+# Build-Skripte (nicht öffentlich)
+kurse/_build.py
+standorte/_build.py

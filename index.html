@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- CookieFirst Consent Banner (muss erstes Element im <head> sein) -->
+<script src="https://consent.cookiefirst.com/sites/ads.rehab-five.com-c57f4a38-bb6e-4ba0-8ad3-2bd4c7fcbab2/consent.js"></script>
+<!-- Google Analytics 4 — wird erst nach Consent aktiviert -->
+<script type="text/plain" data-cookiefirst-category="performance" async src="https://www.googletagmanager.com/gtag/js?id=G-C75C9ZMSEJ"></script>
+<script type="text/plain" data-cookiefirst-category="performance">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =========================================
+       SEO META
+       ========================================= -->
+  <title>REHAB FIVE HEALTH CLUB Münster · Funktionelles Training, Pilates & Präventionskurse</title>
+  <meta name="description" content="Der Health Club von REHAB FIVE in Münster: Funktionelles Training, Pilates und ZPP-zertifizierte Präventionskurse — physiotherapeutisch betreut, in kleinen Gruppen. Friedrich-Ebert-Straße 122. Jetzt Probestunde sichern." />
+  <meta name="keywords" content="Health Club Münster, Fitnessstudio Münster, Funktionelles Training Münster, Pilates Münster, Präventionskurs Münster, ZPP zertifiziert, §20 SGB V, Rückenfit Münster, Athletiktraining Münster, REHAB FIVE Health Club, Kursstudio Münster" />
+  <meta name="author" content="REHAB FIVE GmbH" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#1F342D" />
+  <meta name="geo.region" content="DE-NW" />
+  <meta name="geo.placename" content="Münster" />
+  <meta name="geo.position" content="51.9607;7.6261" />
+  <meta name="ICBM" content="51.9607, 7.6261" />
+  <link rel="canonical" href="https://rehab-five-health-club.com/" />
+  <link rel="alternate" hreflang="de" href="https://rehab-five-health-club.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="REHAB FIVE HEALTH CLUB" />
+  <meta property="og:title" content="REHAB FIVE HEALTH CLUB Münster · Training, Pilates & Prävention" />
+  <meta property="og:description" content="Funktionelles Training, Pilates und ZPP-zertifizierte Präventionskurse in Münster. Physiotherapeutisch betreut. Jetzt Probestunde sichern." />
+  <meta property="og:url" content="https://rehab-five-health-club.com/" />
+  <meta property="og:image" content="https://rehab-five-health-club.com/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="REHAB FIVE HEALTH CLUB Münster — Funktionelles Training in kleinen Gruppen" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="REHAB FIVE HEALTH CLUB Münster · Training, Pilates & Prävention" />
+  <meta name="twitter:description" content="Funktionelles Training, Pilates und ZPP-zertifizierte Präventionskurse in Münster — physiotherapeutisch betreut." />
+  <meta name="twitter:image" content="https://rehab-five-health-club.com/og.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Performance / Fonts (Barlow gemäß Corporate Design) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" />
+
+  <!-- Tailwind (für Produktion bitte kompilieren statt CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // CI-konforme Palette gemäß REHAB FIVE CD-Manual (29.11.2023)
+            ink:    { 50:'#FAFAFA', 100:'#F5F5F5', 200:'#C9C9C9', 700:'#4A4A4A', 900:'#1A1A1A' },
+            forest: { 700:'#1F342D', 800:'#172620', 900:'#101A16' },
+            brand:  { 100:'#FBF1E0', 500:'#D99129', 600:'#C57F1F', 700:'#A66819' },
+            accent: { 500:'#D99129' }
+          },
+          fontFamily: { sans: ['Barlow','system-ui','sans-serif'] },
+          boxShadow: { card: '0 4px 24px -8px rgba(26,26,26,0.10)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color:#1A1A1A; }
+    .display { font-weight: 800; letter-spacing: -0.01em; text-transform: uppercase; }
+    .eyebrow { font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+    .gradient-hero {
+      background:
+        radial-gradient(60% 50% at 80% 15%, rgba(217,145,41,0.22), transparent 60%),
+        linear-gradient(180deg, #1F342D 0%, #172620 100%);
+    }
+    details[open] > summary .chev { transform: rotate(180deg); }
+    .chev { transition: transform .2s ease; }
+  </style>
+
+  <!-- =========================================
+       SCHEMA.ORG JSON-LD (SEO + AEO/GEO)
+       ========================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://rehab-five.com/#organization",
+        "name": "REHAB FIVE",
+        "url": "https://rehab-five.com",
+        "logo": "https://rehab-five.com/wp-content/uploads/logo.svg",
+        "sameAs": [
+          "https://www.instagram.com/rehabfive/",
+          "https://www.facebook.com/rehabfive/",
+          "https://www.linkedin.com/company/rehab-five/"
+        ],
+        "founder": { "@type": "Person", "name": "Aric Brämswig" }
+      },
+      {
+        "@type": ["HealthClub","LocalBusiness","SportsActivityLocation"],
+        "@id": "https://rehab-five-health-club.com/#healthclub",
+        "name": "REHAB FIVE HEALTH CLUB",
+        "alternateName": "REHAB FIVE Health Club Münster",
+        "image": "https://rehab-five-health-club.com/og.jpg",
+        "url": "https://rehab-five-health-club.com",
+        "telephone": "+49 251 747882 00",
+        "email": "info@rehab-five.com",
+        "priceRange": "€€",
+        "description": "Kurs- und Trainingsstudio in Münster mit funktionellem Training, Pilates und ZPP-zertifizierten Präventionskursen — physiotherapeutisch betreut, in kleinen Gruppen.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Friedrich-Ebert-Straße 122",
+          "postalCode": "48153",
+          "addressLocality": "Münster",
+          "addressRegion": "NRW",
+          "addressCountry": "DE"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 51.9607, "longitude": 7.6261 },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "21:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" }
+        ],
+        "parentOrganization": { "@id": "https://rehab-five.com/#organization" },
+        "sameAs": ["https://www.rehab-five.com","https://www.instagram.com/rehabfive/"],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "100", "bestRating": "5", "worstRating": "1" }
+      },
+      {
+        "@type": "Course",
+        "name": "Funktionelles Training",
+        "description": "Ganzkörper-Workout mit funktionellen Bewegungsmustern. Aufbau von Kraft, Stabilität und Beweglichkeit für den Alltag — in kleinen Gruppen, physiotherapeutisch geplant.",
+        "provider": { "@id": "https://rehab-five-health-club.com/#healthclub" },
+        "courseCode": "HC-FUNC",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "onsite",
+          "location": { "@id": "https://rehab-five-health-club.com/#healthclub" }
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "Pilates Mat",
+        "description": "Klassisches Pilates auf der Matte. Tiefe Bauch- und Rückenmuskulatur, Mobilität, bewusste Atmung. In kleinen Gruppen.",
+        "provider": { "@id": "https://rehab-five-health-club.com/#healthclub" },
+        "courseCode": "HC-PIL",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "onsite",
+          "location": { "@id": "https://rehab-five-health-club.com/#healthclub" }
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "Rückenfit · §20 SGB V",
+        "description": "ZPP-zertifizierter Präventionskurs für einen stabilen Rücken. Bis zu 100 % Erstattung über alle gesetzlichen Krankenkassen.",
+        "provider": { "@id": "https://rehab-five-health-club.com/#healthclub" },
+        "courseCode": "HC-RUE",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "onsite",
+          "location": { "@id": "https://rehab-five-health-club.com/#healthclub" }
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "Athletik-Bootcamp",
+        "description": "High-Intensity-Training für Performance-Orientierte. Sprint, Sprung, Kraft — geplant wie für Profisportler.",
+        "provider": { "@id": "https://rehab-five-health-club.com/#healthclub" },
+        "courseCode": "HC-ATH"
+      },
+      {
+        "@type": "Course",
+        "name": "Mobility & Stretch",
+        "description": "Gezielte Beweglichkeitsarbeit für Hüfte, Schulter, Rumpf. Faszientraining, Yoga-Elemente, aktive Mobility-Drills.",
+        "provider": { "@id": "https://rehab-five-health-club.com/#healthclub" },
+        "courseCode": "HC-MOB"
+      },
+      {
+        "@type": "Course",
+        "name": "Fit ab 50 · §20 SGB V",
+        "description": "Sanftes Kraft- und Gleichgewichtstraining. Sturzprophylaxe, Mobilität, Ausdauer — speziell für die zweite Lebenshälfte. ZPP-zertifiziert.",
+        "provider": { "@id": "https://rehab-five-health-club.com/#healthclub" },
+        "courseCode": "HC-FIT50"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Werden die Präventionskurse von der Krankenkasse erstattet?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ja. Unsere Präventionskurse (Rückenfit, Fit ab 50) sind nach §20 SGB V durch die ZPP zertifiziert. Gesetzliche Krankenkassen erstatten in der Regel bis zu 100 % der Kursgebühr — zwei zertifizierte Kurse pro Jahr. Alle Kassen (TK, AOK, Barmer, DAK, IKK u. v. m.) anerkennen unsere Kurse." }
+          },
+          {
+            "@type": "Question",
+            "name": "Brauche ich Vorerfahrung für funktionelles Training?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nein. Wir trainieren in kleinen Gruppen mit maximal 10–12 Teilnehmer:innen. Alle Übungen werden individuell skaliert — vom Einsteiger nach langer Pause bis hin zum Leistungssportler. Beim Vorgespräch klären wir, wo du stehst." }
+          },
+          {
+            "@type": "Question",
+            "name": "Was unterscheidet den REHAB FIVE HEALTH CLUB von einem normalen Fitnessstudio?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Drei Dinge: Erstens wird jeder Kurs von Physiotherapeut:innen und ausgebildeten Trainer:innen geleitet. Zweitens sind die Gruppen klein genug, dass du tatsächlich korrigiert wirst. Drittens kommst du bei Beschwerden direkt aus der REHAB FIVE Physiotherapie nahtlos in den passenden Kurs." }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie buche ich eine Probestunde?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Am einfachsten über unsere Online-Buchung oder telefonisch unter 0251 74788 200. Die erste Stunde ist kostenfrei und unverbindlich." }
+          },
+          {
+            "@type": "Question",
+            "name": "Wo befindet sich der Health Club?",
+            "acceptedAnswer": { "@type": "Answer", "text": "REHAB FIVE HEALTH CLUB liegt in Münster, Friedrich-Ebert-Straße 122 — am selben Standort wie unsere ZPP-zertifizierten Präventionskurse. Parkplätze direkt vor der Tür, sehr gut mit ÖPNV erreichbar." }
+          },
+          {
+            "@type": "Question",
+            "name": "Gibt es eine Vertragsbindung?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nein. Wir bieten flexible Modelle: Probestunde gratis, 10er-Karte (12 Monate gültig) oder Flat-Mitgliedschaft monatlich kündbar. Keine 24-Monate-Verträge, keine Anmeldegebühr." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://rehab-five-health-club.com/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script async src="https://cdn.docmedico-rezeption.de/j9u4c9m7a/reception_embed.js"></script>
+</head>
+
+<body class="bg-white text-ink-900 antialiased">
+
+  <!-- Skip-Link für Accessibility -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ink-900 focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Inhalt springen</a>
+
+  <!-- =========================================
+       HEADER
+       ========================================= -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-ink-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3" aria-label="REHAB FIVE HEALTH CLUB Startseite">
+        <img src="R5-Logo-B-black_RZ.png" alt="REHAB FIVE Logo" class="h-7 w-auto" width="3000" height="643" />
+        <span class="hidden sm:inline-block text-[11px] font-semibold tracking-[0.22em] uppercase text-ink-700 border-l border-ink-200 pl-3">Health Club</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-ink-700" aria-label="Hauptnavigation">
+        <a href="#kurse" class="hover:text-ink-900">Kurse</a>
+        <a href="#konzept" class="hover:text-ink-900">Konzept</a>
+        <a href="#team" class="hover:text-ink-900">Team</a>
+        <a href="#plan" class="hover:text-ink-900">Stundenplan</a>
+        <a href="#preise" class="hover:text-ink-900">Preise</a>
+        <a href="#wissen" class="hover:text-ink-900">Wissen</a>
+        <a href="#standort" class="hover:text-ink-900">Standort</a>
+        <a href="#faq" class="hover:text-ink-900">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="tel:+4925174788200" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-ink-900 hover:text-brand-600" aria-label="Jetzt anrufen">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          0251 74788 200
+        </a>
+        <a href="#anmelden" class="inline-flex items-center justify-center rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-4 py-2 transition">Probestunde sichern</a>
+        <button type="button" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg ring-1 ring-ink-200 text-ink-900 hover:bg-ink-50 transition">
+          <svg id="mobile-menu-icon-open" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg id="mobile-menu-icon-close" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Off-Canvas Menü -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-ink-100 bg-white">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-1 text-base font-medium text-ink-900" aria-label="Mobile Navigation">
+        <a href="#kurse" class="py-2.5 px-1 hover:text-brand-700 border-b border-ink-100">Kurse</a>
+        <a href="#konzept" class="py-2.5 px-1 hover:text-brand-700 border-b border-ink-100">Konzept</a>
+        <a href="#team" class="py-2.5 px-1 hover:text-brand-700 border-b border-ink-100">Team</a>
+        <a href="#plan" class="py-2.5 px-1 hover:text-brand-700 border-b border-ink-100">Stundenplan</a>
+        <a href="#preise" class="py-2.5 px-1 hover:text-brand-700 border-b border-ink-100">Preise</a>
+        <a href="#wissen" class="py-2.5 px-1 hover:text-brand-700 border-b border-ink-100">Wissen</a>
+        <a href="#standort" class="py-2.5 px-1 hover:text-brand-700 border-b border-ink-100">Standort</a>
+        <a href="#faq" class="py-2.5 px-1 hover:text-brand-700">FAQ</a>
+        <a href="tel:+4925174788200" class="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-ink-900 hover:bg-ink-700 text-white font-semibold px-5 py-3 text-sm transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          0251 74788 200
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Announcement-Bar direkt unter dem Header -->
+  <div class="bg-brand-500 text-ink-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center text-xs sm:text-sm font-semibold uppercase tracking-[0.14em]">
+      <span class="inline-flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-ink-900"></span>
+        Neu in Münster
+      </span>
+      <span class="opacity-50">·</span>
+      <span>Friedrich-Ebert-Straße 122</span>
+      <span class="opacity-50 hidden sm:inline">·</span>
+      <a href="#anmelden" class="hidden sm:inline underline underline-offset-2 hover:no-underline">Probestunde sichern →</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- =========================================
+         HERO
+         ========================================= -->
+    <section class="gradient-hero text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
+        <div>
+          <h1 class="display text-[40px] md:text-[44px] lg:text-[60px] xl:text-[72px] leading-[0.95]">
+            Werde stärker<br>
+            <span class="text-brand-500">als gestern.</span>
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-white/85 max-w-xl normal-case font-normal">
+            Der Health Club von REHAB FIVE: Funktionelles Training, Pilates und ZPP-zertifizierte Präventionskurse — in kleinen Gruppen, physiotherapeutisch geplant.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#anmelden" class="inline-flex items-center justify-center rounded-xl bg-brand-500 hover:bg-brand-600 text-ink-900 font-semibold px-6 py-3.5 text-base transition shadow-lg shadow-brand-500/20">
+              Kostenlose Probestunde sichern
+            </a>
+            <a href="tel:+4925174788200" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold px-6 py-3.5 text-base ring-1 ring-white/20 transition">
+              0251 74788 200 anrufen
+            </a>
+          </div>
+          <ul class="mt-8 grid grid-cols-2 gap-y-2 gap-x-6 text-sm text-ink-100/80">
+            <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> Max. 10–12 Teilnehmer:innen</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> Physiotherapeutisch geplant</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> ZPP-zertifizierte Kurse</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> Keine Vertragsbindung</li>
+          </ul>
+          <!-- Trust-Pille (REHAB FIVE Mutter-Rating) -->
+          <a href="https://www.google.com/search?q=rehab+five+m%C3%BCnster" target="_blank" rel="noopener" class="mt-7 inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 ring-1 ring-white/20 rounded-full px-4 py-2 text-sm text-white transition">
+            <span class="text-brand-500 text-base tracking-tight">★★★★★</span>
+            <span class="font-semibold">5,0</span>
+            <span class="text-white/70">·</span>
+            <span class="text-white/85">100+ Google-Bewertungen REHAB FIVE</span>
+          </a>
+        </div>
+
+        <!-- Hero Visual / Trust-Card -->
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-3xl bg-white/5 ring-1 ring-white/10 overflow-hidden">
+            <picture>
+              <source type="image/webp" srcset="img/kraft-800.webp 800w, img/kraft-1200.webp 1200w, img/kraft-1600.webp 1600w" sizes="(min-width: 1024px) 600px, 100vw" />
+              <img src="img/kraft-1200.jpg"
+                   srcset="img/kraft-800.jpg 800w, img/kraft-1200.jpg 1200w, img/kraft-1600.jpg 1600w"
+                   sizes="(min-width: 1024px) 600px, 100vw"
+                   alt="Krafttraining mit Langhantel und Kettlebell im REHAB FIVE HEALTH CLUB Münster — Frauen beim Functional Training"
+                   class="w-full h-full object-cover"
+                   width="1200" height="1500"
+                   loading="eager" fetchpriority="high" />
+            </picture>
+          </div>
+          <div class="absolute -bottom-6 -left-6 sm:-left-10 bg-white text-ink-900 rounded-2xl shadow-card p-5 w-64">
+            <div class="flex items-center gap-1 text-accent-500 text-lg" aria-label="5-Sterne-Bewertung" role="img">★★★★★</div>
+            <p class="mt-1 text-sm font-semibold">Aus REHAB FIVE DNA</p>
+            <p class="text-xs text-ink-700">10+ Jahre Therapie-Expertise in Münster.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         TRUST BAR
+         ========================================= -->
+    <section aria-label="Vertrauen & Anerkennung" class="border-y border-ink-100 bg-ink-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-ink-700">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-brand-500/10 grid place-items-center flex-none text-brand-700">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 9-9 9s-9-4-9-9 3.5-9 9-9 9 4 9 9z"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-semibold text-ink-900">ZPP-zertifiziert</p>
+            <p class="text-xs">Zentrale Prüfstelle Prävention</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-brand-500/10 grid place-items-center flex-none text-brand-700">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-semibold text-ink-900">Alle gesetzl. Kassen</p>
+            <p class="text-xs">TK · AOK · Barmer · DAK · IKK · u. v. m.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-brand-500/10 grid place-items-center flex-none text-brand-700">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-semibold text-ink-900">REHAB FIVE Qualität</p>
+            <p class="text-xs">5,0 · 100+ Google-Bewertungen</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-brand-500/10 grid place-items-center flex-none text-brand-700">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-semibold text-ink-900">Standort Münster</p>
+            <p class="text-xs">Friedrich-Ebert-Straße 122</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         3-SÄULEN / WARUM
+         ========================================= -->
+    <section class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-2xl">
+          <p class="eyebrow text-sm text-brand-500">Unser Konzept</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl">Drei Säulen. Ein Club. Dein Körper im Mittelpunkt.</h2>
+          <p class="mt-4 text-white/80 text-lg">Wir verbinden physiotherapeutische Expertise mit modernem Group-Training. Egal, ob Einstieg nach langer Pause, gezielte Prävention oder Performance — du trainierst nicht irgendwo, sondern richtig.</p>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 grid place-items-center font-bold">⚡</div>
+            <h3 class="mt-4 font-semibold text-lg" style="color:#1F342D">Funktionell stark</h3>
+            <p class="mt-2 text-sm text-ink-700">Ganzkörper-Training mit Eigengewicht, Kettlebells, Bändern. Kraft, Mobilität und Stabilität — exakt so, wie dein Körper sie braucht.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 grid place-items-center font-bold">◎</div>
+            <h3 class="mt-4 font-semibold text-lg" style="color:#1F342D">Tiefenkraft Pilates</h3>
+            <p class="mt-2 text-sm text-ink-700">Pilates Mat in kleinen Gruppen. Core-Aktivierung, Beweglichkeit, Atmung — die ideale Ergänzung zu Kraft und Ausdauer.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 grid place-items-center font-bold">€</div>
+            <h3 class="mt-4 font-semibold text-lg" style="color:#1F342D">Bis zu 100 % erstattet</h3>
+            <p class="mt-2 text-sm text-ink-700">ZPP-zertifizierte Präventionskurse nach §20 SGB V — anerkannt von allen gesetzlichen Krankenkassen, 2× pro Jahr.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 grid place-items-center font-bold">+</div>
+            <h3 class="mt-4 font-semibold text-lg" style="color:#1F342D">Therapeutisch betreut</h3>
+            <p class="mt-2 text-sm text-ink-700">Jeder Kurs wird von Physiotherapeut:innen und ausgebildeten Trainer:innen geleitet — keine 30-Personen-Klassen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         KURSE
+         ========================================= -->
+    <section id="kurse" class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-2xl">
+          <p class="eyebrow text-sm text-brand-500">Kursangebot</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl">Sechs Kurse. Eine Philosophie.</h2>
+          <p class="mt-4 text-white/85 text-lg">Jeder Kurs wurde von unseren Physiotherapeut:innen mitkonzipiert und wird von qualifizierten Trainer:innen geleitet.</p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col">
+            <div class="aspect-[16/10] relative overflow-hidden">
+              <img src="img/kraft-1200.jpg" alt="Funktionelles Training mit Langhantel im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
+              <span class="absolute top-3 left-3 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-ink-900 bg-white rounded-full px-2.5 py-1">Bestseller</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-bold text-xl" style="color:#1F342D">Funktionelles Training</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Ganzkörper-Workout mit funktionellen Bewegungsmustern. Aufbau von Kraft, Stabilität und Beweglichkeit für den Alltag.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">60 Min.</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Alle Level</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Mo / Mi / Fr</span>
+              </div>
+              <div class="mt-5 pt-4 border-t border-ink-100 flex items-end justify-between">
+                <div>
+                  <p class="font-bold text-lg" style="color:#1F342D">15 €</p>
+                  <p class="text-xs text-ink-700">pro Einheit</p>
+                </div>
+                <a href="#anmelden" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Probestunde →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col">
+            <div class="aspect-[16/10] relative overflow-hidden">
+              <img src="img/standorte/friedrich-ebert-122/hero-matten.jpg" alt="Pilates-Matten im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-bold text-xl" style="color:#1F342D">Pilates Mat</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Klassisches Pilates auf der Matte. Tiefe Bauch- und Rückenmuskulatur, Mobilität, bewusste Atmung.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">55 Min.</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Einsteiger & Fortgeschr.</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Di / Do</span>
+              </div>
+              <div class="mt-5 pt-4 border-t border-ink-100 flex items-end justify-between">
+                <div>
+                  <p class="font-bold text-lg" style="color:#1F342D">14 €</p>
+                  <p class="text-xs text-ink-700">pro Einheit</p>
+                </div>
+                <a href="#anmelden" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Probestunde →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col">
+            <div class="aspect-[16/10] relative overflow-hidden">
+              <img src="img/community-1200.jpg" alt="Rückenfit-Präventionskurs im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
+              <span class="absolute top-3 left-3 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">Kasse erstattet</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-bold text-xl" style="color:#1F342D">Rückenfit · §20</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">ZPP-zertifizierter Präventionskurs. Tiefenmuskulatur, Haltungsschule, Mobilisation. Bis zu 100 % Kassenerstattung.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">8 × 60 Min.</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">§20 SGB V</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Mo / Do</span>
+              </div>
+              <div class="mt-5 pt-4 border-t border-ink-100 flex items-end justify-between">
+                <div>
+                  <p class="font-bold text-lg" style="color:#1F342D">149 €</p>
+                  <p class="text-xs text-ink-700">8er-Kursblock · Erstattung möglich</p>
+                </div>
+                <a href="#anmelden" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Anmelden →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col">
+            <div class="aspect-[16/10] relative overflow-hidden">
+              <img src="img/barbell-1200.jpg" alt="Athletik-Bootcamp im REHAB FIVE HEALTH CLUB Münster — Training mit Hex-Hanteln" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-bold text-xl" style="color:#1F342D">Athletik-Bootcamp</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">High-Intensity-Training für Performance-Orientierte. Sprint, Sprung, Kraft — geplant wie für Profisportler.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">50 Min.</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Fortgeschritten</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Samstag</span>
+              </div>
+              <div class="mt-5 pt-4 border-t border-ink-100 flex items-end justify-between">
+                <div>
+                  <p class="font-bold text-lg" style="color:#1F342D">15 €</p>
+                  <p class="text-xs text-ink-700">pro Einheit</p>
+                </div>
+                <a href="#anmelden" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Probestunde →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col">
+            <div class="aspect-[16/10] relative overflow-hidden">
+              <img src="img/standorte/friedrich-ebert-122/gallery-01-kursraum.jpg" alt="Mobility-Training im REHAB FIVE HEALTH CLUB Münster — Kursraum mit Rig" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-bold text-xl" style="color:#1F342D">Mobility & Stretch</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Gezielte Beweglichkeitsarbeit für Hüfte, Schulter, Rumpf. Faszientraining, Yoga-Elemente, Mobility-Drills.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">45 Min.</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Alle Level</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Di / Fr</span>
+              </div>
+              <div class="mt-5 pt-4 border-t border-ink-100 flex items-end justify-between">
+                <div>
+                  <p class="font-bold text-lg" style="color:#1F342D">15 €</p>
+                  <p class="text-xs text-ink-700">pro Einheit</p>
+                </div>
+                <a href="#anmelden" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Probestunde →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col">
+            <div class="aspect-[16/10] relative overflow-hidden">
+              <img src="img/senior-1200.jpg" alt="Fit-ab-50-Kurs im REHAB FIVE HEALTH CLUB Münster — Senior beim Stretching" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
+              <span class="absolute top-3 left-3 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">Kasse erstattet</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-bold text-xl" style="color:#1F342D">Fit ab 50 · §20</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Sanftes Kraft- und Gleichgewichtstraining. Sturzprophylaxe, Mobilität, Ausdauer — speziell für die zweite Lebenshälfte.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">8 × 60 Min.</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">§20 SGB V</span>
+                <span class="bg-ink-50 ring-1 ring-ink-100 rounded-full px-2.5 py-1 text-ink-700">Mi / Fr</span>
+              </div>
+              <div class="mt-5 pt-4 border-t border-ink-100 flex items-end justify-between">
+                <div>
+                  <p class="font-bold text-lg" style="color:#1F342D">149 €</p>
+                  <p class="text-xs text-ink-700">8er-Kursblock · Erstattung möglich</p>
+                </div>
+                <a href="#anmelden" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Anmelden →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         KONZEPT
+         ========================================= -->
+    <section id="konzept" class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="aspect-[5/6] rounded-3xl ring-1 ring-white/10 overflow-hidden relative">
+          <picture>
+            <source type="image/webp" srcset="img/community-800.webp 800w, img/community-1200.webp 1200w, img/community-1600.webp 1600w" sizes="(min-width: 1024px) 600px, 100vw" />
+            <img src="img/community-1200.jpg"
+                 srcset="img/community-800.jpg 800w, img/community-1200.jpg 1200w, img/community-1600.jpg 1600w"
+                 sizes="(min-width: 1024px) 600px, 100vw"
+                 alt="Kursteilnehmer:innen aller Altersgruppen im REHAB FIVE HEALTH CLUB Münster — Trainer leitet Bench Press an, Gruppe schaut zu"
+                 class="w-full h-full object-cover"
+                 width="1200" height="1440"
+                 loading="lazy" />
+          </picture>
+          <div class="absolute top-6 left-6 bg-white text-ink-900 rounded-2xl p-4 shadow-card max-w-[240px]">
+            <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Therapie-DNA</p>
+            <p class="mt-1 text-sm">10+ Jahre REHAB FIVE in Münster.</p>
+          </div>
+          <div class="absolute bottom-6 right-6 bg-white text-ink-900 rounded-2xl p-4 shadow-card max-w-[220px]">
+            <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Kleine Gruppen</p>
+            <p class="mt-1 text-sm">Max. 10–12 Plätze pro Kurs.</p>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow text-sm text-brand-500">Warum REHAB FIVE HEALTH CLUB</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl">Kein Fitnessstudio. Ein Bewegungsstudio mit Tiefe.</h2>
+          <p class="mt-4 text-white/80 text-lg">Wir haben über zehn Jahre Physiotherapie in Münster gemacht — und immer wieder gehört: „Wo kann ich denn jetzt richtig trainieren, ohne dass mein Knie wieder rebelliert?" Die Antwort gibt's jetzt unter einem Dach.</p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-ink-900 grid place-items-center font-bold text-sm flex-none mt-0.5">✓</span>
+              <div><strong class="block">Physiotherapeutisch geplant</strong><p class="text-white/75 text-sm mt-1">Jeder Kurs ist von unseren Therapeut:innen mitkonzipiert — nicht nur „irgendein Workout".</p></div>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-ink-900 grid place-items-center font-bold text-sm flex-none mt-0.5">✓</span>
+              <div><strong class="block">Nahtloser Übergang aus der Therapie</strong><p class="text-white/75 text-sm mt-1">Reha abgeschlossen? Du steigst direkt in den passenden Kurs ein. Volle Bewegungsanamnese im Hintergrund.</p></div>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-ink-900 grid place-items-center font-bold text-sm flex-none mt-0.5">✓</span>
+              <div><strong class="block">Kleine Gruppen, echte Korrektur</strong><p class="text-white/75 text-sm mt-1">Bei uns gibt's keine 30-Personen-Klassen. Jede:r wird gesehen, jede:r wird korrigiert.</p></div>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-ink-900 grid place-items-center font-bold text-sm flex-none mt-0.5">✓</span>
+              <div><strong class="block">Krankenkassen-Förderung</strong><p class="text-white/75 text-sm mt-1">Unsere Präventionskurse sind ZPP-zertifiziert — bis zu 100 % Kostenerstattung über deine Kasse.</p></div>
+            </li>
+          </ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#anmelden" class="inline-flex items-center justify-center rounded-xl bg-brand-500 hover:bg-brand-600 text-ink-900 font-semibold px-6 py-3.5 text-base transition shadow-lg shadow-brand-500/20">Probestunde sichern</a>
+            <a href="https://www.rehab-five.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold px-6 py-3.5 text-base ring-1 ring-white/20 transition">Zur REHAB FIVE Physio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         TEAM
+         ========================================= -->
+    <section id="team" class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-2xl">
+          <p class="eyebrow text-sm text-brand-600">Dein Team</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl" style="color:#1F342D">Therapeut:innen, die auch unterrichten.</h2>
+          <p class="mt-4 text-ink-700 text-lg">Alle Trainer:innen sind ausgebildete Physiotherapeut:innen, Sporttherapeut:innen oder zertifizierte Kursleiter:innen. Du trainierst mit Menschen, die genau wissen, was dein Körper braucht.</p>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Trainer 1: Simon Brüggemann -->
+          <article class="group rounded-2xl overflow-hidden ring-1 ring-ink-100 bg-ink-50 shadow-card">
+            <div class="aspect-[4/5] relative overflow-hidden">
+              <img src="img/team/simon-brueggemann.jpg" alt="Simon Brüggemann · Physiotherapeut im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="1500" />
+              <span class="absolute top-3 left-3 inline-flex items-center text-[10px] font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">Funktionell · Athletik</span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg" style="color:#1F342D">Simon Brüggemann</h3>
+              <p class="text-sm text-ink-700">Physiotherapeut</p>
+              <p class="mt-3 text-xs text-ink-700">B.A. Sportwissenschaft · Reha-erfahren · Funktionelles Training & Athletik</p>
+            </div>
+          </article>
+
+          <!-- Trainer 2: Niklas Schaub -->
+          <article class="group rounded-2xl overflow-hidden ring-1 ring-ink-100 bg-ink-50 shadow-card">
+            <div class="aspect-[4/5] relative overflow-hidden">
+              <img src="img/team/niklas-schaub.jpg" alt="Niklas Schaub · Physiotherapeut im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="960" height="1200" />
+              <span class="absolute top-3 left-3 inline-flex items-center text-[10px] font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">§20 · Prävention</span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg" style="color:#1F342D">Niklas Schaub</h3>
+              <p class="text-sm text-ink-700">Physiotherapeut</p>
+              <p class="mt-3 text-xs text-ink-700">Schwerpunkt Präventionskurse · ZPP-zertifizierte Kursleitung · Rückenfit & Fit ab 50</p>
+            </div>
+          </article>
+
+          <!-- Trainer 3: Recruiting / Coming Soon -->
+          <article class="group rounded-2xl overflow-hidden ring-1 ring-brand-500/30 bg-white shadow-card relative">
+            <div class="aspect-[4/5] relative overflow-hidden" style="background:linear-gradient(180deg,#FBF1E0,#FFFFFF)">
+              <div class="absolute inset-0 grid place-items-center">
+                <svg class="w-16 h-16 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+              </div>
+              <span class="absolute top-3 left-3 inline-flex items-center text-[10px] font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">Wir wachsen</span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg" style="color:#1F342D">Du willst dabei sein?</h3>
+              <p class="text-sm text-ink-700">Physiotherapeut:in / Trainer:in</p>
+              <p class="mt-3 text-xs text-ink-700">Wir suchen Verstärkung für Pilates, Mobility und Athletik-Bootcamp. <a href="mailto:info@rehab-five.com?subject=Bewerbung%20Health%20Club" class="text-brand-600 hover:text-brand-700 underline font-semibold">Bewirb dich →</a></p>
+            </div>
+          </article>
+
+        </div>
+
+
+        <!-- Trust-Footer -->
+        <div class="mt-12 rounded-2xl bg-ink-50 ring-1 ring-ink-100 p-6 md:p-8 flex flex-wrap items-center justify-between gap-6">
+          <div>
+            <p class="font-bold text-lg" style="color:#1F342D">2 Trainer im Health Club · 8+ Therapeut:innen im REHAB FIVE Team</p>
+            <p class="mt-1 text-sm text-ink-700">Hinter jedem Kurs steht das geballte Know-how von 10+ Jahren REHAB FIVE in Münster.</p>
+          </div>
+          <a href="https://www.rehab-five.com/ueber-uns/team" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-ink-900 hover:bg-brand-600 text-white font-semibold px-5 py-3 text-sm transition">Gesamtes Team kennenlernen →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         TESTIMONIALS
+         ========================================= -->
+    <section class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="flex items-end justify-between flex-wrap gap-4">
+          <div class="max-w-2xl">
+            <p class="eyebrow text-sm text-brand-500">Stimmen</p>
+            <h2 class="display mt-3 text-3xl md:text-4xl">Das sagen unsere Mitglieder.</h2>
+            <p class="mt-3 text-white/85 text-lg">Aus über 100 Google-Bewertungen und persönlichen Rückmeldungen — übertragen auf den Health Club.</p>
+          </div>
+          <a href="https://www.google.com/search?q=rehab+five+m%C3%BCnster" target="_blank" rel="noopener" class="text-sm font-semibold text-brand-500 hover:text-brand-400">Alle Google-Bewertungen →</a>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+            <div class="flex items-center gap-1 text-accent-500" aria-label="5 Sterne" role="img">★★★★★</div>
+            <blockquote class="mt-3 text-ink-900 leading-relaxed">„War von Oktober bis Mai aufgrund meines Kreuzbandrisses dort und bin 1000 % zufrieden. Die Räumlichkeiten und Geräte sind einwandfrei und es herrscht eine sehr lockere und freundliche Atmosphäre. Mein Therapeut hat mich super betreut — gefordert, aber nie überfordert."</blockquote>
+            <figcaption class="mt-4 text-sm text-ink-700"><strong class="text-ink-900">Adrian</strong> · nach Kreuzbandriss</figcaption>
+          </figure>
+
+          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+            <div class="flex items-center gap-1 text-accent-500" aria-label="5 Sterne" role="img">★★★★★</div>
+            <blockquote class="mt-3 text-ink-900 leading-relaxed">„Neun Monate Training bei Rückenproblemen — abwechslungsreich, immer abgestimmt auf mein Energieniveau. Dank der individuellen Herangehensweise hat sich mein Rücken so stark verbessert, wie ich es nie für möglich gehalten hätte."</blockquote>
+            <figcaption class="mt-4 text-sm text-ink-700"><strong class="text-ink-900">Maite S.</strong> · Rückenschmerzen</figcaption>
+          </figure>
+
+          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+            <div class="flex items-center gap-1 text-accent-500" aria-label="5 Sterne" role="img">★★★★★</div>
+            <blockquote class="mt-3 text-ink-900 leading-relaxed">„Das ganze Team ist extrem aufgeschlossen und freundlich, man fühlt sich sehr wohl und ernst genommen. Meine Beschwerden wurden schnell besser — und auch für die Weiterarbeit zu Hause wird man bestens vorbereitet."</blockquote>
+            <figcaption class="mt-4 text-sm text-ink-700"><strong class="text-ink-900">Pauline J.</strong> · Mitglied</figcaption>
+          </figure>
+        </div>
+
+        <!-- Rating-Bar -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/85">
+          <div class="flex items-center gap-2"><span class="text-brand-500 text-base tracking-tight">★★★★★</span><strong class="text-white">5,0</strong> auf Google</div>
+          <span class="text-white/30 hidden sm:inline">·</span>
+          <div><strong class="text-white">100+</strong> verifizierte Bewertungen</div>
+          <span class="text-white/30 hidden sm:inline">·</span>
+          <div><strong class="text-white">10+ Jahre</strong> REHAB FIVE in Münster</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         3-STEP PROCESS
+         ========================================= -->
+    <section class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-2xl">
+          <p class="eyebrow text-sm text-brand-500">So einfach geht's</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl">In 3 Schritten zur ersten Kursstunde.</h2>
+        </div>
+        <ol class="mt-12 grid md:grid-cols-3 gap-6">
+          <li class="rounded-2xl bg-white ring-1 ring-ink-100 p-7 shadow-card">
+            <div class="text-brand-600 font-extrabold text-3xl">01</div>
+            <h3 class="mt-3 font-bold text-lg" style="color:#1F342D">Probestunde buchen</h3>
+            <p class="mt-2 text-sm text-ink-700">Wähle online deinen Kurs und sichere dir einen kostenfreien Probetermin. Wir bestätigen innerhalb von 24 Stunden.</p>
+          </li>
+          <li class="rounded-2xl bg-white ring-1 ring-ink-100 p-7 shadow-card">
+            <div class="text-brand-600 font-extrabold text-3xl">02</div>
+            <h3 class="mt-3 font-bold text-lg" style="color:#1F342D">Vorgespräch & Trainieren</h3>
+            <p class="mt-2 text-sm text-ink-700">Kurze Bewegungsanamnese vor Ort, dann ab in den Kurs. Du lernst Trainer:in, Gruppe und Methode kennen.</p>
+          </li>
+          <li class="rounded-2xl bg-white ring-1 ring-ink-100 p-7 shadow-card">
+            <div class="text-brand-600 font-extrabold text-3xl">03</div>
+            <h3 class="mt-3 font-bold text-lg" style="color:#1F342D">Mitglied werden</h3>
+            <p class="mt-2 text-sm text-ink-700">Gefällt's dir? Wähle zwischen 10er-Karte oder Flat — monatlich kündbar, keine Anmeldegebühr.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================
+         STUNDENPLAN
+         ========================================= -->
+    <section id="plan" class="bg-ink-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-2xl">
+          <p class="eyebrow text-sm text-brand-600">Stundenplan</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl" style="color:#1F342D">So sieht eine Woche bei uns aus.</h2>
+          <p class="mt-3 text-ink-700">Vorläufiger Plan ab Eröffnung. Plätze begrenzt — Buchung über das Online-System.</p>
+        </div>
+
+        <div class="mt-10 bg-white rounded-2xl ring-1 ring-ink-100 p-4 md:p-6 shadow-card overflow-x-auto">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-3 min-w-[640px] md:min-w-0">
+            <div>
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-ink-700 text-center pb-2 border-b border-ink-100">Montag</h4>
+              <div class="mt-3 space-y-2">
+                <div class="rounded-lg bg-ink-50 border-l-2 border-brand-500 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">07:30</p><p class="text-xs text-ink-700">Funktionelles Training</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-forest-700 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">18:00</p><p class="text-xs text-ink-700">Rückenfit · §20</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-brand-500 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">19:15</p><p class="text-xs text-ink-700">Funktionelles Training</p></div>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-ink-700 text-center pb-2 border-b border-ink-100">Dienstag</h4>
+              <div class="mt-3 space-y-2">
+                <div class="rounded-lg bg-ink-50 border-l-2 border-ink-200 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">09:00</p><p class="text-xs text-ink-700">Pilates Mat</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-brand-500 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">18:00</p><p class="text-xs text-ink-700">Mobility & Stretch</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-ink-200 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">19:15</p><p class="text-xs text-ink-700">Pilates Mat</p></div>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-ink-700 text-center pb-2 border-b border-ink-100">Mittwoch</h4>
+              <div class="mt-3 space-y-2">
+                <div class="rounded-lg bg-ink-50 border-l-2 border-brand-500 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">07:30</p><p class="text-xs text-ink-700">Funktionelles Training</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-forest-700 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">17:00</p><p class="text-xs text-ink-700">Fit ab 50 · §20</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-brand-500 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">19:15</p><p class="text-xs text-ink-700">Funktionelles Training</p></div>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-ink-700 text-center pb-2 border-b border-ink-100">Donnerstag</h4>
+              <div class="mt-3 space-y-2">
+                <div class="rounded-lg bg-ink-50 border-l-2 border-ink-200 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">09:00</p><p class="text-xs text-ink-700">Pilates Mat</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-forest-700 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">18:00</p><p class="text-xs text-ink-700">Rückenfit · §20</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-ink-200 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">19:15</p><p class="text-xs text-ink-700">Pilates Mat</p></div>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-ink-700 text-center pb-2 border-b border-ink-100">Freitag</h4>
+              <div class="mt-3 space-y-2">
+                <div class="rounded-lg bg-ink-50 border-l-2 border-brand-500 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">07:30</p><p class="text-xs text-ink-700">Funktionelles Training</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-forest-700 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">17:00</p><p class="text-xs text-ink-700">Fit ab 50 · §20</p></div>
+                <div class="rounded-lg bg-ink-50 border-l-2 border-brand-500 px-3 py-2"><p class="font-bold text-sm" style="color:#1F342D">18:30</p><p class="text-xs text-ink-700">Mobility & Stretch</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         PREISE / MITGLIEDSCHAFT
+         ========================================= -->
+    <section id="preise" class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-2xl">
+          <p class="eyebrow text-sm text-brand-500">Mitgliedschaft</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl">Drei Wege. Null Vertragsbindung.</h2>
+          <p class="mt-4 text-white/85 text-lg">Keine 24-Monate-Verträge. Keine Anmeldegebühr. Du entscheidest, wie oft du kommst.</p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-7 shadow-card flex flex-col">
+            <h3 class="font-bold text-2xl" style="color:#1F342D">Probestunde</h3>
+            <p class="mt-1 text-sm text-ink-700">Einmalig, unverbindlich</p>
+            <p class="mt-6 display text-5xl" style="color:#1F342D">0 €</p>
+            <ul class="mt-6 space-y-2.5 flex-1 text-sm text-ink-700">
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Beliebiger Kurs deiner Wahl</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Persönliches Vorgespräch</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Kurze Bewegungsanamnese</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Keine Verpflichtung danach</li>
+            </ul>
+            <a href="#anmelden" class="mt-6 inline-flex items-center justify-center rounded-xl bg-ink-900 hover:bg-ink-700 text-white font-semibold px-5 py-3 text-sm transition">Probestunde sichern</a>
+          </article>
+
+          <article class="relative rounded-2xl bg-white ring-2 ring-brand-500 p-7 shadow-card flex flex-col">
+            <span class="absolute -top-3 left-7 inline-flex text-xs font-bold uppercase tracking-wider bg-brand-500 text-ink-900 rounded-full px-3 py-1">Beliebt</span>
+            <h3 class="font-bold text-2xl" style="color:#1F342D">10er-Karte</h3>
+            <p class="mt-1 text-sm text-ink-700">Flexibel, 12 Monate gültig</p>
+            <p class="mt-6 display text-5xl" style="color:#1F342D">130 € <span class="text-base font-normal text-ink-700">· 13 €/Kurs</span></p>
+            <ul class="mt-6 space-y-2.5 flex-1 text-sm text-ink-700">
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 10 freie Kurs-Einheiten</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Alle Kurse außer §20</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 12 Monate gültig</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Übertragbar auf Familie</li>
+            </ul>
+            <a href="#anmelden" class="mt-6 inline-flex items-center justify-center rounded-xl bg-brand-500 hover:bg-brand-600 font-semibold px-5 py-3 text-sm transition shadow-lg shadow-brand-500/20" style="color:#ffffff">10er-Karte holen</a>
+          </article>
+
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-7 shadow-card flex flex-col">
+            <h3 class="font-bold text-2xl" style="color:#1F342D">Flat-Mitgliedschaft</h3>
+            <p class="mt-1 text-sm text-ink-700">Monatlich kündbar</p>
+            <p class="mt-6 display text-5xl" style="color:#1F342D">79 € <span class="text-base font-normal text-ink-700">/Monat</span></p>
+            <ul class="mt-6 space-y-2.5 flex-1 text-sm text-ink-700">
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Alle Kurse, unbegrenzt</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 10 % auf Physio-Termine</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Monatlich kündbar</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Pause-Funktion (2 × pro Jahr)</li>
+            </ul>
+            <a href="#anmelden" class="mt-6 inline-flex items-center justify-center rounded-xl bg-ink-900 hover:bg-ink-700 text-white font-semibold px-5 py-3 text-sm transition">Mitglied werden</a>
+          </article>
+
+        </div>
+        <p class="mt-6 text-sm text-white/75">Präventionskurse (§20) werden separat als Block abgerechnet — Kasse erstattet bis zu 100 %.</p>
+      </div>
+    </section>
+
+    <!-- =========================================
+         EMPFEHLUNGSPROGRAMM (Bring a Friend)
+         ========================================= -->
+    <section id="empfehlung" class="bg-ink-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div class="rounded-3xl bg-white ring-1 ring-ink-100 shadow-card overflow-hidden grid lg:grid-cols-[1.1fr_0.9fr] gap-0">
+
+          <!-- Left -->
+          <div class="p-8 md:p-12 lg:p-14">
+            <p class="eyebrow text-sm text-brand-600">Empfehlung</p>
+            <h2 class="display mt-3 text-3xl md:text-4xl" style="color:#1F342D">Bring eine Freundin mit.<br>Beide bekommen 20 € geschenkt.</h2>
+            <p class="mt-4 text-ink-700 text-lg">Du trainierst lieber mit jemandem, den du kennst? Bring eine Freundin oder einen Freund zur Probestunde — und beide bekommen 20 € Guthaben auf die nächste 10er-Karte (effektiv 110 € statt 130 €).</p>
+
+            <ul class="mt-7 space-y-3 text-sm text-ink-700">
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-brand-500 text-ink-900 grid place-items-center font-bold flex-none mt-0.5">1</span><div><strong style="color:#1F342D">Komm gemeinsam zur Probestunde.</strong> Die ist für beide kostenfrei.</div></li>
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-brand-500 text-ink-900 grid place-items-center font-bold flex-none mt-0.5">2</span><div><strong style="color:#1F342D">Sag uns vor Ort: „Wir kommen zu zweit."</strong> Wir notieren euch als Paar.</div></li>
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-brand-500 text-ink-900 grid place-items-center font-bold flex-none mt-0.5">3</span><div><strong style="color:#1F342D">Beide bekommen 20 € Guthaben</strong> für die erste 10er-Karte oder die ersten 2 Flat-Monate.</div></li>
+            </ul>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#anmelden" class="inline-flex items-center justify-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 transition shadow-lg shadow-brand-500/20">Probestunde zu zweit anfragen</a>
+              <a href="mailto:info@rehab-five.com?subject=Empfehlung%20Health%20Club" class="inline-flex items-center justify-center rounded-xl ring-1 ring-ink-200 hover:bg-ink-50 text-ink-900 font-semibold px-6 py-3 transition">Per Mail anfragen</a>
+            </div>
+            <p class="mt-4 text-xs text-ink-700">Pro Person nur einmal einlösbar. Nicht kombinierbar mit anderen Aktionen.</p>
+          </div>
+
+          <!-- Right -->
+          <div class="relative min-h-[320px] lg:min-h-full" style="background:linear-gradient(135deg,#1F342D 0%,#172620 100%)">
+            <img src="img/community-1200.jpg" alt="Trainingsgruppe im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" loading="lazy" />
+            <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(31,52,45,0.55) 0%, rgba(23,38,32,0.85) 100%)"></div>
+            <div class="relative h-full p-8 md:p-12 flex flex-col justify-end text-white">
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">2 × 20 € geschenkt</p>
+              <p class="display text-5xl md:text-6xl mt-3" style="color:#ffffff">40 €</p>
+              <p class="mt-2 text-white/85 max-w-xs">geteilte Vergünstigung, wenn ihr zu zweit kommt — gut für eure Motivation und euren Geldbeutel.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         STANDORT
+         ========================================= -->
+    <section id="standort" class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-sm text-brand-500">Standort</p>
+          <h2 class="display mt-3 text-3xl md:text-4xl">Friedrich-Ebert-Straße 122 · Münster.</h2>
+          <p class="mt-3 text-white/85">Eigener Standort des Health Clubs — keine 5 Gehminuten von der REHAB FIVE Physiotherapie (Friedrich-Ebert-Straße 127). Wer aus der Reha kommt, läuft also wortwörtlich rüber. Parkplätze direkt vor der Tür, sehr gut mit ÖPNV erreichbar.</p>
+          <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-brand-500 bg-brand-500/10 ring-1 ring-brand-500/30 rounded-full px-3 py-1.5">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Teil der REHAB FIVE Familie · seit 10+ Jahren in Münster
+          </div>
+        </div>
+
+        <!-- Bildgalerie -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <button data-img="img/barbell-1600.jpg" class="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 aspect-square focus:outline-none focus:ring-2 focus:ring-brand-500 col-span-2 md:col-span-2 lg:col-span-2" aria-label="Bild vergrößern: Junge Frau beim Bench Press mit Hex-Hanteln, Gruppe trainiert im Hintergrund">
+            <img src="img/barbell-1200.jpg" alt="Junge Frau beim Bench Press mit Hex-Hanteln im REHAB FIVE HEALTH CLUB Münster — Gruppe trainiert im Hintergrund" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </button>
+          <button data-img="img/senior-1200.jpg" class="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 aspect-square focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Bild vergrößern: Älterer Trainierender beim Stretching">
+            <img src="img/senior-800.jpg" alt="Älterer Trainierender beim Stretching auf der Matte im Health Club Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </button>
+          <button data-img="img/standorte/friedrich-ebert-122/gallery-01-kursraum.jpg" class="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 aspect-square focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Bild vergrößern: Kurs- und Trainingsraum mit Rig und großen Fenstern">
+            <img src="img/standorte/friedrich-ebert-122/gallery-01-kursraum.jpg" alt="Kurs- und Trainingsraum im REHAB FIVE HEALTH CLUB mit Rig und großen Fenstern" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </button>
+          <button data-img="img/standorte/friedrich-ebert-122/gallery-04-kettlebells.jpg" class="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 aspect-square focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Bild vergrößern: Kettlebells von oben">
+            <img src="img/standorte/friedrich-ebert-122/gallery-04-kettlebells.jpg" alt="Kettlebells (russische Kugelhanteln) von oben" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </button>
+          <button data-img="img/standorte/friedrich-ebert-122/gallery-05-powerbar.jpg" class="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 aspect-square focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Bild vergrößern: ATX-Power-Bar mit Blick in den Kursraum">
+            <img src="img/standorte/friedrich-ebert-122/gallery-05-powerbar.jpg" alt="ATX-Power-Bar mit Blick in den Kursraum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </button>
+          <button data-img="img/standorte/friedrich-ebert-122/gallery-02-wallballs.jpg" class="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 aspect-square focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Bild vergrößern: Medizinbälle für funktionelles Training">
+            <img src="img/standorte/friedrich-ebert-122/gallery-02-wallballs.jpg" alt="Medizinbälle (Wallballs) im Health Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </button>
+        </div>
+
+        <!-- Adresse + Karte -->
+        <div class="mt-10 grid md:grid-cols-2 gap-6 items-stretch">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-7 shadow-card text-ink-900">
+            <span class="inline-flex text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-500/10 rounded-full px-2.5 py-1">Health Club</span>
+            <h3 class="font-bold text-xl mt-3" style="color:#1F342D">REHAB FIVE HEALTH CLUB</h3>
+            <address class="not-italic mt-2 text-ink-700">Friedrich-Ebert-Straße 122<br>48153 Münster</address>
+            <ul class="mt-4 text-sm text-ink-700 space-y-1.5">
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Funktionelles Training, Pilates, Mobility</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> ZPP-zertifizierte Präventionskurse</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Rig, Hanteln, Kettlebells & freie Fläche</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Parkplätze direkt vor der Tür</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Mo–Fr 7:00–21:00 · Sa 9:00–15:00</li>
+            </ul>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://www.google.com/maps/search/?api=1&query=Friedrich-Ebert-Stra%C3%9Fe+122+48153+M%C3%BCnster" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-4 py-2.5 transition">Route planen</a>
+              <a href="tel:+4925174788200" class="inline-flex items-center justify-center rounded-lg bg-ink-900 hover:bg-ink-700 text-white font-semibold text-sm px-4 py-2.5 transition">0251 74788 200</a>
+              <a href="mailto:info@rehab-five.com" class="inline-flex items-center justify-center rounded-lg ring-1 ring-ink-200 hover:bg-ink-50 text-ink-900 font-semibold text-sm px-4 py-2.5 transition">E-Mail schreiben</a>
+            </div>
+          </article>
+          <div id="map-container" class="relative rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5 min-h-[320px]">
+            <!-- Consent-Platzhalter -->
+            <div id="map-consent" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-6 bg-forest-800/95">
+              <svg class="w-10 h-10 text-brand-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p class="text-white text-sm max-w-xs">Beim Anzeigen der Karte werden Daten an Google übertragen. Mehr in unserer <a href="https://www.rehab-five.com/datenschutz" target="_blank" rel="noopener" class="underline hover:text-brand-500">Datenschutzerklärung</a>.</p>
+              <button type="button" id="map-load-btn" class="mt-4 inline-flex items-center justify-center rounded-xl bg-brand-500 hover:bg-brand-600 font-semibold px-5 py-2.5 text-sm transition" style="color:#ffffff">Karte laden</button>
+            </div>
+            <iframe id="map-iframe" title="Google Maps Karte: Friedrich-Ebert-Straße 122, Münster" data-src="https://www.google.com/maps?q=Friedrich-Ebert-Stra%C3%9Fe+122,+48153+M%C3%BCnster&output=embed" src="about:blank" width="100%" height="100%" style="border:0; min-height:320px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Weitere Standorte -->
+        <article class="mt-6 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 md:p-7">
+          <p class="eyebrow text-xs text-brand-500">Auch in Münster</p>
+          <h3 class="font-bold text-xl mt-2 text-white">Du suchst Physiotherapie?</h3>
+          <p class="mt-2 text-sm text-white/85">Unsere Praxen für Physiotherapie & Krankengymnastik findest du an drei weiteren Standorten in Münster.</p>
+          <div class="mt-4 grid sm:grid-cols-3 gap-3 text-sm">
+            <a href="https://www.rehab-five.com" target="_blank" rel="noopener" class="rounded-lg bg-white/5 hover:bg-white/10 ring-1 ring-white/10 px-4 py-3 text-white/90 hover:text-white transition">Scharnhorststraße 40<span class="block text-xs text-white/60">48151 Münster</span></a>
+            <a href="https://www.rehab-five.com" target="_blank" rel="noopener" class="rounded-lg bg-white/5 hover:bg-white/10 ring-1 ring-white/10 px-4 py-3 text-white/90 hover:text-white transition">Friedrich-Ebert-Str. 127<span class="block text-xs text-white/60">48153 Münster</span></a>
+            <a href="https://www.rehab-five.com" target="_blank" rel="noopener" class="rounded-lg bg-white/5 hover:bg-white/10 ring-1 ring-white/10 px-4 py-3 text-white/90 hover:text-white transition">Weseler Straße 71<span class="block text-xs text-white/60">Büro & Ernährung</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Lightbox für Galerie -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 cursor-zoom-out" onclick="closeLightbox()" aria-hidden="true">
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg" />
+      <button class="absolute top-5 right-5 text-white/90 hover:text-white text-2xl font-bold" aria-label="Schließen">×</button>
+    </div>
+    <style>#lightbox.open{display:flex}</style>
+
+    <!-- =========================================
+         WISSEN / BLOG-TEASER
+         ========================================= -->
+    <section id="wissen" class="bg-forest-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="flex flex-wrap items-end justify-between gap-4 max-w-4xl">
+          <div>
+            <p class="eyebrow text-sm text-brand-500">Wissen</p>
+            <h2 class="display mt-3 text-3xl md:text-4xl">Bewegung verstehen.</h2>
+            <p class="mt-3 text-white/85 text-lg max-w-2xl">Hintergründe zu Training, Prävention und Krankenkassen-Erstattung — geschrieben von Therapeut:innen, nicht von Marketing.</p>
+          </div>
+          <a href="/wissen/" class="text-sm font-semibold text-brand-500 hover:text-brand-400">Alle Artikel →</a>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <a href="/wissen/funktionelles-training-was-ist-das" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col hover:ring-brand-500/40 hover:shadow-lg transition">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="img/kraft-1200.jpg" alt="Funktionelles Training im Health Club Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-500/10 rounded-full px-2.5 py-1 w-max">Training</p>
+              <h3 class="mt-3 font-bold text-lg leading-snug group-hover:text-brand-700" style="color:#1F342D">Funktionelles Training: Was ist das wirklich?</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Mehr als ein Trend: Warum funktionelle Bewegungsmuster im Alltag mehr bringen als isolierte Geräte-Übungen.</p>
+              <p class="mt-4 text-sm font-semibold text-brand-600 group-hover:text-brand-700">Artikel lesen →</p>
+            </div>
+          </a>
+
+          <a href="/wissen/zpp-praeventionskurs-krankenkasse-erstattung" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col hover:ring-brand-500/40 hover:shadow-lg transition">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="img/community-1200.jpg" alt="ZPP-zertifizierter Präventionskurs in Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-500/10 rounded-full px-2.5 py-1 w-max">Krankenkasse</p>
+              <h3 class="mt-3 font-bold text-lg leading-snug group-hover:text-brand-700" style="color:#1F342D">Präventionskurs: So holst du 100 % von der Kasse zurück</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">ZPP-Zertifizierung, §20 SGB V und der Antrag — der komplette Ablauf in 4 Schritten erklärt.</p>
+              <p class="mt-4 text-sm font-semibold text-brand-600 group-hover:text-brand-700">Artikel lesen →</p>
+            </div>
+          </a>
+
+          <a href="/wissen/pilates-vs-yoga-was-passt-zu-dir" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col hover:ring-brand-500/40 hover:shadow-lg transition">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="img/standorte/friedrich-ebert-122/hero-matten.jpg" alt="Pilates auf der Matte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-500/10 rounded-full px-2.5 py-1 w-max">Pilates</p>
+              <h3 class="mt-3 font-bold text-lg leading-snug group-hover:text-brand-700" style="color:#1F342D">Pilates vs. Yoga: Was passt zu dir?</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Beides macht beweglich — aber an unterschiedlichen Stellen. Wir erklären die Unterschiede aus therapeutischer Sicht.</p>
+              <p class="mt-4 text-sm font-semibold text-brand-600 group-hover:text-brand-700">Artikel lesen →</p>
+            </div>
+          </a>
+
+          <a href="/wissen/krafttraining-ab-50" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col hover:ring-brand-500/40 hover:shadow-lg transition">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="img/senior-1200.jpg" alt="Krafttraining ab 50 in Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-500/10 rounded-full px-2.5 py-1 w-max">Senioren</p>
+              <h3 class="mt-3 font-bold text-lg leading-snug group-hover:text-brand-700" style="color:#1F342D">Krafttraining ab 50: Was wirklich wichtig ist</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Sarkopenie, Sturzprophylaxe, Beweglichkeit — warum Kraft ab der zweiten Lebenshälfte wichtiger wird, nicht weniger.</p>
+              <p class="mt-4 text-sm font-semibold text-brand-600 group-hover:text-brand-700">Artikel lesen →</p>
+            </div>
+          </a>
+
+          <a href="/wissen/mobility-warum-beweglichkeit-zaehlt" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col hover:ring-brand-500/40 hover:shadow-lg transition">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="img/standorte/friedrich-ebert-122/gallery-01-kursraum.jpg" alt="Mobility-Training im Health Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-500/10 rounded-full px-2.5 py-1 w-max">Mobility</p>
+              <h3 class="mt-3 font-bold text-lg leading-snug group-hover:text-brand-700" style="color:#1F342D">Mobility: Die unterschätzte Trainingsform</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Warum aktive Beweglichkeit wichtiger ist als Stretching — und wie du sie messbar verbesserst.</p>
+              <p class="mt-4 text-sm font-semibold text-brand-600 group-hover:text-brand-700">Artikel lesen →</p>
+            </div>
+          </a>
+
+          <a href="/wissen/rueckenschmerzen-vorbeugen-uebungen" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col hover:ring-brand-500/40 hover:shadow-lg transition">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="img/standorte/friedrich-ebert-122/gallery-05-powerbar.jpg" alt="Rückenfit-Training in Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-500/10 rounded-full px-2.5 py-1 w-max">Rücken</p>
+              <h3 class="mt-3 font-bold text-lg leading-snug group-hover:text-brand-700" style="color:#1F342D">Rückenschmerzen vorbeugen: 5 effektive Übungen</h3>
+              <p class="mt-2 text-sm text-ink-700 flex-1">Was die Studien wirklich zeigen — und welche fünf Übungen den größten Nutzen pro Minute bringen.</p>
+              <p class="mt-4 text-sm font-semibold text-brand-600 group-hover:text-brand-700">Artikel lesen →</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         FAQ
+         ========================================= -->
+    <section id="faq" class="bg-forest-700 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <p class="eyebrow text-sm text-brand-500">Häufige Fragen</p>
+        <h2 class="display mt-3 text-3xl md:text-4xl">Alles, was du wissen musst.</h2>
+
+        <div class="mt-10 space-y-3">
+          <details open class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
+            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg list-none" style="color:#1A1A1A">
+              Werden die Präventionskurse von der Krankenkasse erstattet?
+              <span class="chev text-brand-600">▾</span>
+            </summary>
+            <p class="mt-3" style="color:#4A4A4A">Ja. Unsere Präventionskurse (Rückenfit, Fit ab 50) sind nach §20 SGB V durch die <strong>ZPP zertifiziert</strong>. Gesetzliche Kassen erstatten in der Regel <strong>bis zu 100 %</strong> der Kursgebühr — zwei zertifizierte Kurse pro Jahr. Anerkannt von <strong>allen gesetzlichen Krankenkassen</strong> (TK, AOK, Barmer, DAK, IKK, BKK u. v. m.).</p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
+            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg list-none" style="color:#1A1A1A">
+              Brauche ich Vorerfahrung für funktionelles Training?
+              <span class="chev text-brand-600">▾</span>
+            </summary>
+            <p class="mt-3" style="color:#4A4A4A">Nein. Wir trainieren in kleinen Gruppen mit maximal <strong>10–12 Teilnehmer:innen</strong>. Alle Übungen werden individuell skaliert — vom Einsteiger nach langer Pause bis hin zum Leistungssportler. Beim Vorgespräch klären wir, wo du stehst.</p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
+            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg list-none" style="color:#1A1A1A">
+              Was unterscheidet den REHAB FIVE HEALTH CLUB von einem normalen Fitnessstudio?
+              <span class="chev text-brand-600">▾</span>
+            </summary>
+            <p class="mt-3" style="color:#4A4A4A"><strong>Drei Dinge:</strong> Erstens wird jeder Kurs von Physiotherapeut:innen und ausgebildeten Trainer:innen geleitet. Zweitens sind die Gruppen klein genug, dass du tatsächlich korrigiert wirst. Drittens kommst du bei Beschwerden direkt aus der REHAB FIVE Physiotherapie nahtlos in den passenden Kurs.</p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
+            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg list-none" style="color:#1A1A1A">
+              Komme ich nach einer Verletzung oder Operation wieder in Bewegung?
+              <span class="chev text-brand-600">▾</span>
+            </summary>
+            <p class="mt-3" style="color:#4A4A4A">Genau dafür sind wir da. Wenn du in der REHAB FIVE Physiotherapie warst, übernehmen wir deine Bewegungsanamnese und planen den Übergang. Auch ohne vorherige Therapie machen wir vor dem ersten Kurs ein ausführliches Vorgespräch.</p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
+            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg list-none" style="color:#1A1A1A">
+              Wie buche ich eine Probestunde?
+              <span class="chev text-brand-600">▾</span>
+            </summary>
+            <p class="mt-3" style="color:#4A4A4A">Am einfachsten über unsere Online-Buchung oder telefonisch unter <a href="tel:+4925174788200" class="text-brand-600 hover:text-brand-700 underline">0251 74788 200</a>. Die erste Stunde ist <strong>kostenfrei und unverbindlich</strong>.</p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
+            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg list-none" style="color:#1A1A1A">
+              Gibt es eine Vertragsbindung?
+              <span class="chev text-brand-600">▾</span>
+            </summary>
+            <p class="mt-3" style="color:#4A4A4A">Nein. Wir bieten flexible Modelle: Probestunde gratis, 10er-Karte (12 Monate gültig) oder Flat-Mitgliedschaft <strong>monatlich kündbar</strong>. Keine 24-Monate-Verträge, keine Anmeldegebühr.</p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
+            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg list-none" style="color:#1A1A1A">
+              Wo befindet sich der Health Club?
+              <span class="chev text-brand-600">▾</span>
+            </summary>
+            <p class="mt-3" style="color:#4A4A4A">REHAB FIVE HEALTH CLUB liegt in Münster, <strong>Friedrich-Ebert-Straße 122</strong> — am selben Standort wie unsere ZPP-zertifizierten Präventionskurse. Parkplätze direkt vor der Tür, sehr gut mit ÖPNV erreichbar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         FINAL CTA + BUCHUNG
+         ========================================= -->
+    <section id="anmelden" class="relative overflow-hidden bg-forest-700 text-white">
+      <div class="absolute inset-0 opacity-30 pointer-events-none" aria-hidden="true"><div class="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-brand-500/40 blur-3xl"></div></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-start">
+
+          <!-- Linke Spalte: Headline & schnelle Wege -->
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest text-brand-500">Probestunde sichern</p>
+            <h2 class="display mt-3 text-3xl md:text-4xl">Komm vorbei. Trainier mit uns. Unverbindlich.</h2>
+            <p class="mt-5 text-lg text-white/85 max-w-xl">Wähle deinen Wunschkurs und sichere dir einen kostenfreien Probetermin. Wir melden uns innerhalb von 24 Stunden bei dir.</p>
+            <ul class="mt-7 grid sm:grid-cols-1 gap-2 text-white/90 max-w-md text-sm">
+              <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> Termin in 24 h — wir melden uns bei dir</li>
+              <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> Kostenfrei & unverbindlich — keine Vertragsbindung</li>
+              <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> Persönliche Bewegungsanamnese vor Ort</li>
+            </ul>
+
+            <div class="mt-8 rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+              <p class="text-xs uppercase tracking-widest text-brand-500 font-semibold">Lieber direkt?</p>
+              <div class="mt-3 flex flex-wrap gap-3">
+                <a href="?dmropen=1" class="inline-flex items-center justify-center rounded-xl bg-brand-500 hover:bg-brand-600 font-semibold px-5 py-3 text-sm transition shadow-lg shadow-brand-500/20" style="color:#ffffff">⚡ Online buchen</a>
+                <a href="tel:+4925174788200" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold px-5 py-3 text-sm ring-1 ring-white/20 transition">0251 74788 200</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rechte Spalte: Formular -->
+          <div>
+            <form id="probestunden-form"
+                  action="https://formsubmit.co/info@rehab-five.com"
+                  method="POST"
+                  class="rounded-2xl bg-white text-ink-900 p-6 md:p-8 shadow-card ring-1 ring-white/20">
+
+              <!-- FormSubmit-Config: kein Captcha, Redirect, Auto-Reply -->
+              <input type="hidden" name="_subject" value="Neue Probestunden-Anfrage · REHAB FIVE HEALTH CLUB">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://rehab-five-health-club.com/?danke=1">
+              <input type="text" name="_honey" style="display:none">
+
+              <p class="eyebrow text-xs text-brand-600">Probestunde anfragen</p>
+              <h3 class="font-bold text-xl mt-2" style="color:#1F342D">In 60 Sekunden ausgefüllt.</h3>
+              <p class="mt-2 text-sm text-ink-700">Wir melden uns innerhalb von 24 Stunden mit einem Terminvorschlag.</p>
+
+              <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="block">
+                  <span class="block text-xs font-semibold text-ink-700 mb-1">Vorname *</span>
+                  <input required type="text" name="Vorname" autocomplete="given-name" class="w-full rounded-lg ring-1 ring-ink-200 focus:ring-2 focus:ring-brand-500 px-3 py-2.5 text-sm bg-white outline-none transition" />
+                </label>
+                <label class="block">
+                  <span class="block text-xs font-semibold text-ink-700 mb-1">Nachname</span>
+                  <input type="text" name="Nachname" autocomplete="family-name" class="w-full rounded-lg ring-1 ring-ink-200 focus:ring-2 focus:ring-brand-500 px-3 py-2.5 text-sm bg-white outline-none transition" />
+                </label>
+              </div>
+
+              <label class="block mt-3">
+                <span class="block text-xs font-semibold text-ink-700 mb-1">E-Mail *</span>
+                <input required type="email" name="Email" autocomplete="email" class="w-full rounded-lg ring-1 ring-ink-200 focus:ring-2 focus:ring-brand-500 px-3 py-2.5 text-sm bg-white outline-none transition" placeholder="dein-name@beispiel.de" />
+              </label>
+
+              <label class="block mt-3">
+                <span class="block text-xs font-semibold text-ink-700 mb-1">Telefon (optional)</span>
+                <input type="tel" name="Telefon" autocomplete="tel" class="w-full rounded-lg ring-1 ring-ink-200 focus:ring-2 focus:ring-brand-500 px-3 py-2.5 text-sm bg-white outline-none transition" placeholder="0151 …" />
+              </label>
+
+              <label class="block mt-3">
+                <span class="block text-xs font-semibold text-ink-700 mb-1">Wunschkurs *</span>
+                <select required name="Wunschkurs" class="w-full rounded-lg ring-1 ring-ink-200 focus:ring-2 focus:ring-brand-500 px-3 py-2.5 text-sm bg-white outline-none transition">
+                  <option value="">Bitte wählen …</option>
+                  <option>Funktionelles Training</option>
+                  <option>Pilates Mat</option>
+                  <option>Rückenfit · §20</option>
+                  <option>Athletik-Bootcamp</option>
+                  <option>Mobility & Stretch</option>
+                  <option>Fit ab 50 · §20</option>
+                  <option>Noch unsicher — beratet mich</option>
+                </select>
+              </label>
+
+              <label class="block mt-3">
+                <span class="block text-xs font-semibold text-ink-700 mb-1">Nachricht (optional)</span>
+                <textarea name="Nachricht" rows="3" class="w-full rounded-lg ring-1 ring-ink-200 focus:ring-2 focus:ring-brand-500 px-3 py-2.5 text-sm bg-white outline-none transition resize-y" placeholder="Wann passt es dir? Beschwerden, die wir wissen sollten?"></textarea>
+              </label>
+
+              <button type="submit" class="mt-5 w-full inline-flex items-center justify-center rounded-xl bg-brand-500 hover:bg-brand-600 font-semibold px-5 py-3.5 text-base transition shadow-lg shadow-brand-500/20" style="color:#ffffff">Probestunde anfragen →</button>
+
+              <p class="mt-3 text-xs text-ink-700 leading-relaxed">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß <a href="https://www.rehab-five.com/datenschutz" target="_blank" rel="noopener" class="underline hover:text-brand-600">Datenschutzerklärung</a> zu. Wir nutzen deine Daten ausschließlich für die Beantwortung deiner Anfrage.</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+  <footer class="bg-ink-50 border-t border-ink-100 text-ink-700 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3">
+          <img src="R5-Logo-B-black_RZ.png" alt="REHAB FIVE Logo" class="h-8 w-auto" width="3000" height="643" />
+          <span class="text-[11px] font-semibold tracking-[0.22em] uppercase text-ink-700 border-l border-ink-200 pl-3">Health Club</span>
+        </div>
+        <p class="mt-4 max-w-md">Der Health Club von REHAB FIVE. Funktionelles Training, Pilates und ZPP-zertifizierte Präventionskurse — physiotherapeutisch geplant, in kleinen Gruppen, in Münster.</p>
+        <div class="mt-4 flex items-center gap-4">
+          <a href="https://www.google.com/search?q=rehab+five+münster" target="_blank" rel="noopener" class="text-ink-900 hover:text-brand-600">Google</a>
+          <a href="https://www.instagram.com/rehabfive/" target="_blank" rel="noopener" class="text-ink-900 hover:text-brand-600">Instagram</a>
+          <a href="https://www.linkedin.com/company/rehab-five/" target="_blank" rel="noopener" class="text-ink-900 hover:text-brand-600">LinkedIn</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-ink-900 font-semibold">Standort</h3>
+        <address class="not-italic mt-3 space-y-3">
+          <div><strong class="text-ink-900">Health Club</strong><br>Friedrich-Ebert-Straße 122<br>48153 Münster</div>
+          <a href="tel:+4925174788200" class="block text-ink-900 hover:text-brand-600">0251 74788 200</a>
+          <a href="mailto:info@rehab-five.com" class="block text-ink-900 hover:text-brand-600">info@rehab-five.com</a>
+        </address>
+      </div>
+      <div>
+        <h3 class="text-ink-900 font-semibold">Rechtliches</h3>
+        <ul class="mt-3 space-y-2">
+          <li><a href="https://www.rehab-five.com/impressum" target="_blank" rel="noopener" class="hover:text-ink-900">Impressum</a></li>
+          <li><a href="https://www.rehab-five.com/datenschutz" target="_blank" rel="noopener" class="hover:text-ink-900">Datenschutz</a></li>
+          <li><a href="https://www.rehab-five.com/agb" target="_blank" rel="noopener" class="hover:text-ink-900">AGB</a></li>
+          <li><a href="cookie-richtlinie.html" class="hover:text-ink-900">Cookie-Richtlinie</a></li>
+          <li><a href="#" data-cookiefirst-action="open-preferences" class="hover:text-ink-900">Cookie-Einstellungen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-ink-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-xs flex flex-wrap items-center justify-between gap-3">
+        <p>© <span id="y"></span> REHAB FIVE. Alle Rechte vorbehalten.</p>
+        <p>Made in Münster · Inhaber: Aric Brämswig</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="md:hidden fixed bottom-3 inset-x-3 z-30 flex gap-2">
+    <a href="tel:+4925174788200" class="flex-1 inline-flex items-center justify-center rounded-xl bg-white ring-1 ring-ink-200 text-ink-900 font-semibold px-4 py-3 shadow-card">Anrufen</a>
+    <a href="#anmelden" class="flex-[1.4] inline-flex items-center justify-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold px-4 py-3 shadow-card">Probestunde sichern</a>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Mobile Menü Toggle
+    (function(){
+      var btn = document.getElementById('mobile-menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('mobile-menu-icon-open');
+      var iconClose = document.getElementById('mobile-menu-icon-close');
+      if (!btn || !menu) return;
+      function setOpen(open){
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      btn.addEventListener('click', function(){
+        var open = menu.classList.contains('hidden');
+        setOpen(open);
+      });
+      menu.querySelectorAll('a[href^="#"]').forEach(function(a){
+        a.addEventListener('click', function(){ setOpen(false); });
+      });
+    })();
+
+    // Google-Maps Consent-Wrapper
+    (function(){
+      var btn = document.getElementById('map-load-btn');
+      var consent = document.getElementById('map-consent');
+      var iframe = document.getElementById('map-iframe');
+      if (!btn || !consent || !iframe) return;
+      btn.addEventListener('click', function(){
+        iframe.src = iframe.getAttribute('data-src');
+        consent.style.display = 'none';
+      });
+    })();
+
+    // Lightbox für Standort-Galerie
+    (function(){
+      var lb = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lightbox-img');
+      if (!lb || !lbImg) return;
+      document.querySelectorAll('[data-img]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var src = btn.getAttribute('data-img');
+          var alt = btn.getAttribute('aria-label') || '';
+          lbImg.src = src;
+          lbImg.alt = alt;
+          lb.classList.add('open');
+          lb.setAttribute('aria-hidden','false');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      window.closeLightbox = function(){
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden','true');
+        lbImg.src = '';
+        document.body.style.overflow = '';
+      };
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') window.closeLightbox();
+      });
+    })();
+  </script>
+
+</body>
+</html>
