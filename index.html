@@ -89,6 +89,60 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
     }
     details[open] > summary .chev { transform: rotate(180deg); }
     .chev { transition: transform .2s ease; }
+
+    /* === Scroll-Reveal Animations =========================================
+       Elemente mit data-reveal werden beim Reinscrollen weich eingeblendet.
+       Reduce-Motion wird respektiert (Accessibility).
+       =================================================================== */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+      will-change: opacity, transform;
+    }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-reveal-delay="100"] { transition-delay: .08s; }
+    [data-reveal-delay="200"] { transition-delay: .16s; }
+    [data-reveal-delay="300"] { transition-delay: .24s; }
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* === Hero-Pattern (subtile Punkte) ================================== */
+    .hero-pattern {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      background-position: 0 0;
+    }
+
+    /* === Card-Hover-Polish ============================================== */
+    .card-hover {
+      transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px -16px rgba(31,52,45,.25);
+    }
+    .card-hover img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .card-hover:hover img { transform: scale(1.04); }
+    @media (prefers-reduced-motion: reduce) {
+      .card-hover, .card-hover img { transition: none !important; transform: none !important; }
+    }
+
+    /* === Section-Divider Wellen ========================================= */
+    .divider-wave-down,
+    .divider-wave-up {
+      display: block;
+      width: 100%;
+      height: 60px;
+      line-height: 0;
+    }
+    @media (max-width: 640px) {
+      .divider-wave-down, .divider-wave-up { height: 36px; }
+    }
   </style>
 
   <!-- =========================================
@@ -318,8 +372,12 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
     <!-- =========================================
          HERO
          ========================================= -->
-    <section class="gradient-hero text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20 lg:py-24 grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12 items-center">
+    <section class="gradient-hero text-white relative overflow-hidden">
+      <!-- Subtle Punkt-Pattern -->
+      <div class="absolute inset-0 hero-pattern pointer-events-none" aria-hidden="true"></div>
+      <!-- Glow rechts oben für Tiefe -->
+      <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full pointer-events-none" aria-hidden="true" style="background:radial-gradient(closest-side, rgba(217,145,41,.18), transparent 70%); filter:blur(20px)"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20 lg:py-24 grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12 items-center">
         <div>
           <h1 class="display text-[32px] sm:text-[38px] md:text-[44px] lg:text-[60px] xl:text-[72px] leading-[0.95]">
             Werde stärker<br>
@@ -424,8 +482,8 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
     <section class="bg-forest-700 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-2xl">
-          <p class="eyebrow text-sm text-brand-500">Unser Konzept</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Drei Säulen. Ein Club. Dein Körper im Mittelpunkt.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-500">Unser Konzept</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Drei Säulen. Ein Club. Dein Körper im Mittelpunkt.</h2>
           <p class="mt-4 text-white/80 text-lg">Wir verbinden physiotherapeutische Expertise mit modernem Group-Training. Egal, ob Einstieg nach langer Pause, gezielte Prävention oder Performance — du trainierst nicht irgendwo, sondern richtig.</p>
         </div>
 
@@ -460,15 +518,15 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
     <section id="kurse" class="bg-forest-700 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-2xl">
-          <p class="eyebrow text-sm text-brand-500">Kursangebot</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Sechs Kurse. Eine Philosophie.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-500">Kursangebot</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Sechs Kurse. Eine Philosophie.</h2>
           <p class="mt-4 text-white/85 text-lg">Jeder Kurs wurde von unseren Physiotherapeut:innen mitkonzipiert und wird von qualifizierten Trainer:innen geleitet.</p>
           <p class="md:hidden mt-3 text-xs text-white/60 inline-flex items-center gap-2"><span>← seitlich wischen →</span></p>
         </div>
 
         <div class="mt-8 md:mt-12 flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-4 px-4 pb-4 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:-mx-0 md:px-0 md:pb-0" style="scrollbar-width:none">
 
-          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
             <div class="aspect-[16/10] relative overflow-hidden">
               <img src="img/kraft-1200.jpg" alt="Funktionelles Training mit Langhantel im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
               <span class="absolute top-3 left-3 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-ink-900 bg-white rounded-full px-2.5 py-1">Bestseller</span>
@@ -491,7 +549,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
             <div class="aspect-[16/10] relative overflow-hidden">
               <img src="img/standorte/friedrich-ebert-122/hero-matten.jpg" alt="Pilates-Matten im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
             </div>
@@ -513,7 +571,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
             <div class="aspect-[16/10] relative overflow-hidden">
               <img src="img/community-1200.jpg" alt="Rückenfit-Präventionskurs im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
               <span class="absolute top-3 left-3 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">Kasse erstattet</span>
@@ -536,7 +594,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
             <div class="aspect-[16/10] relative overflow-hidden">
               <img src="img/barbell-1200.jpg" alt="Athletik-Bootcamp im REHAB FIVE HEALTH CLUB Münster — Training mit Hex-Hanteln" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
             </div>
@@ -558,7 +616,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
             <div class="aspect-[16/10] relative overflow-hidden">
               <img src="img/standorte/friedrich-ebert-122/gallery-01-kursraum.jpg" alt="Mobility-Training im REHAB FIVE HEALTH CLUB Münster — Kursraum mit Rig" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
             </div>
@@ -580,7 +638,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
+          <article class="rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1">
             <div class="aspect-[16/10] relative overflow-hidden">
               <img src="img/senior-1200.jpg" alt="Fit-ab-50-Kurs im REHAB FIVE HEALTH CLUB Münster — Senior beim Stretching" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="750" />
               <span class="absolute top-3 left-3 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">Kasse erstattet</span>
@@ -633,8 +691,8 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
           </div>
         </div>
         <div>
-          <p class="eyebrow text-sm text-brand-500">Warum REHAB FIVE HEALTH CLUB</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Kein Fitnessstudio. Ein Bewegungsstudio mit Tiefe.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-500">Warum REHAB FIVE HEALTH CLUB</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Kein Fitnessstudio. Ein Bewegungsstudio mit Tiefe.</h2>
           <p class="mt-4 text-white/80 text-lg">Wir haben über zehn Jahre Physiotherapie in Münster gemacht — und immer wieder gehört: „Wo kann ich denn jetzt richtig trainieren, ohne dass mein Knie wieder rebelliert?" Die Antwort gibt's jetzt unter einem Dach.</p>
           <ul class="mt-8 space-y-4">
             <li class="flex gap-3">
@@ -662,21 +720,26 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
       </div>
     </section>
 
+    <!-- Divider: forest → white -->
+    <div class="bg-forest-700 leading-none" aria-hidden="true">
+      <svg class="divider-wave-down w-full block" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 C320,55 720,55 1100,25 C1280,11 1380,4 1440,0 L1440,60 L0,60 Z" fill="#FFFFFF"></path></svg>
+    </div>
+
     <!-- =========================================
          TEAM
          ========================================= -->
     <section id="team" class="bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-2xl">
-          <p class="eyebrow text-sm text-brand-600">Dein Team</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl" style="color:#1F342D">Therapeut:innen, die auch unterrichten.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-600">Dein Team</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl" style="color:#1F342D">Therapeut:innen, die auch unterrichten.</h2>
           <p class="mt-4 text-ink-700 text-lg">Alle Trainer:innen sind ausgebildete Physiotherapeut:innen, Sporttherapeut:innen oder zertifizierte Kursleiter:innen. Du trainierst mit Menschen, die genau wissen, was dein Körper braucht.</p>
         </div>
 
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- Trainer 1: Simon Brüggemann -->
-          <article class="group rounded-2xl overflow-hidden ring-1 ring-ink-100 bg-ink-50 shadow-card">
+          <article class="group rounded-2xl overflow-hidden ring-1 ring-ink-100 bg-ink-50 shadow-card card-hover">
             <div class="aspect-[3/4] sm:aspect-[4/5] relative overflow-hidden">
               <img src="img/team/simon-brueggemann.jpg" alt="Simon Brüggemann · Physiotherapeut im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1200" height="1500" />
               <span class="absolute top-3 left-3 inline-flex items-center text-[10px] font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">Funktionell · Athletik</span>
@@ -689,7 +752,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
           </article>
 
           <!-- Trainer 2: Niklas Schaub -->
-          <article class="group rounded-2xl overflow-hidden ring-1 ring-ink-100 bg-ink-50 shadow-card">
+          <article class="group rounded-2xl overflow-hidden ring-1 ring-ink-100 bg-ink-50 shadow-card card-hover">
             <div class="aspect-[3/4] sm:aspect-[4/5] relative overflow-hidden">
               <img src="img/team/niklas-schaub.jpg" alt="Niklas Schaub · Physiotherapeut im REHAB FIVE HEALTH CLUB Münster" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="960" height="1200" />
               <span class="absolute top-3 left-3 inline-flex items-center text-[10px] font-semibold uppercase tracking-wider text-ink-900 bg-brand-500 rounded-full px-2.5 py-1">§20 · Prävention</span>
@@ -730,6 +793,11 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
       </div>
     </section>
 
+    <!-- Divider: white → forest -->
+    <div class="bg-white leading-none" aria-hidden="true">
+      <svg class="divider-wave-up w-full block" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 C320,5 720,5 1100,35 C1280,49 1380,56 1440,60 L1440,60 L0,60 Z" fill="#1F342D"></path></svg>
+    </div>
+
     <!-- =========================================
          TESTIMONIALS
          ========================================= -->
@@ -737,27 +805,27 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="flex items-end justify-between flex-wrap gap-4">
           <div class="max-w-2xl">
-            <p class="eyebrow text-sm text-brand-500">Stimmen</p>
-            <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Das sagen unsere Mitglieder.</h2>
+            <p data-reveal class="eyebrow text-sm text-brand-500">Stimmen</p>
+            <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Das sagen unsere Mitglieder.</h2>
             <p class="mt-3 text-white/85 text-lg">Aus über 100 Google-Bewertungen und persönlichen Rückmeldungen — übertragen auf den Health Club.</p>
           </div>
           <a href="https://www.google.com/search?q=rehab+five+m%C3%BCnster" target="_blank" rel="noopener" class="text-sm font-semibold text-brand-500 hover:text-brand-400">Alle Google-Bewertungen →</a>
         </div>
 
         <div class="mt-10 grid md:grid-cols-3 gap-6">
-          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card card-hover">
             <div class="flex items-center gap-1 text-accent-500" aria-label="5 Sterne" role="img">★★★★★</div>
             <blockquote class="mt-3 text-ink-900 leading-relaxed">„War von Oktober bis Mai aufgrund meines Kreuzbandrisses dort und bin 1000 % zufrieden. Die Räumlichkeiten und Geräte sind einwandfrei und es herrscht eine sehr lockere und freundliche Atmosphäre. Mein Therapeut hat mich super betreut — gefordert, aber nie überfordert."</blockquote>
             <figcaption class="mt-4 text-sm text-ink-700"><strong class="text-ink-900">Adrian</strong> · nach Kreuzbandriss</figcaption>
           </figure>
 
-          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card card-hover">
             <div class="flex items-center gap-1 text-accent-500" aria-label="5 Sterne" role="img">★★★★★</div>
             <blockquote class="mt-3 text-ink-900 leading-relaxed">„Neun Monate Training bei Rückenproblemen — abwechslungsreich, immer abgestimmt auf mein Energieniveau. Dank der individuellen Herangehensweise hat sich mein Rücken so stark verbessert, wie ich es nie für möglich gehalten hätte."</blockquote>
             <figcaption class="mt-4 text-sm text-ink-700"><strong class="text-ink-900">Maite S.</strong> · Rückenschmerzen</figcaption>
           </figure>
 
-          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card">
+          <figure class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 shadow-card card-hover">
             <div class="flex items-center gap-1 text-accent-500" aria-label="5 Sterne" role="img">★★★★★</div>
             <blockquote class="mt-3 text-ink-900 leading-relaxed">„Das ganze Team ist extrem aufgeschlossen und freundlich, man fühlt sich sehr wohl und ernst genommen. Meine Beschwerden wurden schnell besser — und auch für die Weiterarbeit zu Hause wird man bestens vorbereitet."</blockquote>
             <figcaption class="mt-4 text-sm text-ink-700"><strong class="text-ink-900">Pauline J.</strong> · Mitglied</figcaption>
@@ -781,8 +849,8 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
     <section class="bg-forest-700 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-2xl">
-          <p class="eyebrow text-sm text-brand-500">So einfach geht's</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">In 3 Schritten zur ersten Kursstunde.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-500">So einfach geht's</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">In 3 Schritten zur ersten Kursstunde.</h2>
         </div>
         <ol class="mt-12 grid md:grid-cols-3 gap-6">
           <li class="rounded-2xl bg-white ring-1 ring-ink-100 p-7 shadow-card">
@@ -804,14 +872,19 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
       </div>
     </section>
 
+    <!-- Divider: forest → ink-50 -->
+    <div class="bg-forest-700 leading-none" aria-hidden="true">
+      <svg class="divider-wave-down w-full block" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 C400,50 1040,10 1440,40 L1440,60 L0,60 Z" fill="#FAFAFA"></path></svg>
+    </div>
+
     <!-- =========================================
          STUNDENPLAN
          ========================================= -->
     <section id="plan" class="bg-ink-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-2xl">
-          <p class="eyebrow text-sm text-brand-600">Stundenplan</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl" style="color:#1F342D">So sieht eine Woche bei uns aus.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-600">Stundenplan</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl" style="color:#1F342D">So sieht eine Woche bei uns aus.</h2>
           <p class="mt-3 text-ink-700">Vorläufiger Plan ab Eröffnung. Plätze begrenzt — Buchung über das Online-System.</p>
         </div>
 
@@ -868,8 +941,8 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
     <section id="preise" class="bg-forest-700 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-2xl">
-          <p class="eyebrow text-sm text-brand-500">Mitgliedschaft</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Drei Wege. Null Vertragsbindung.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-500">Mitgliedschaft</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Drei Wege. Null Vertragsbindung.</h2>
           <p class="mt-4 text-white/85 text-lg">Keine 24-Monate-Verträge. Keine Anmeldegebühr. Du entscheidest, wie oft du kommst.</p>
         </div>
 
@@ -929,8 +1002,8 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
 
           <!-- Left -->
           <div class="p-8 md:p-12 lg:p-14">
-            <p class="eyebrow text-sm text-brand-600">Empfehlung</p>
-            <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl" style="color:#1F342D">Bring eine Freundin mit.<br>Beide bekommen 20 € geschenkt.</h2>
+            <p data-reveal class="eyebrow text-sm text-brand-600">Empfehlung</p>
+            <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl" style="color:#1F342D">Bring eine Freundin mit.<br>Beide bekommen 20 € geschenkt.</h2>
             <p class="mt-4 text-ink-700 text-lg">Du trainierst lieber mit jemandem, den du kennst? Bring eine Freundin oder einen Freund zur Probestunde — und beide bekommen 20 € Guthaben auf die nächste 10er-Karte (effektiv 110 € statt 130 €).</p>
 
             <ul class="mt-7 space-y-3 text-sm text-ink-700">
@@ -961,14 +1034,19 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
       </div>
     </section>
 
+    <!-- Divider: ink-50 → forest -->
+    <div class="bg-ink-50 leading-none" aria-hidden="true">
+      <svg class="divider-wave-up w-full block" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 C400,10 1040,50 1440,20 L1440,60 L0,60 Z" fill="#1F342D"></path></svg>
+    </div>
+
     <!-- =========================================
          STANDORT
          ========================================= -->
     <section id="standort" class="bg-forest-700 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-3xl">
-          <p class="eyebrow text-sm text-brand-500">Standort</p>
-          <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Friedrich-Ebert-Straße 122 · Münster.</h2>
+          <p data-reveal class="eyebrow text-sm text-brand-500">Standort</p>
+          <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Friedrich-Ebert-Straße 122 · Münster.</h2>
           <p class="mt-3 text-white/85">Eigener Standort des Health Clubs — keine 5 Gehminuten von der REHAB FIVE Physiotherapie (Friedrich-Ebert-Straße 127). Wer aus der Reha kommt, läuft also wortwörtlich rüber. Parkplätze direkt vor der Tür, sehr gut mit ÖPNV erreichbar.</p>
           <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-brand-500 bg-brand-500/10 ring-1 ring-brand-500/30 rounded-full px-3 py-1.5">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1056,8 +1134,8 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="flex flex-wrap items-end justify-between gap-4 max-w-4xl">
           <div>
-            <p class="eyebrow text-sm text-brand-500">Wissen</p>
-            <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Bewegung verstehen.</h2>
+            <p data-reveal class="eyebrow text-sm text-brand-500">Wissen</p>
+            <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Bewegung verstehen.</h2>
             <p class="mt-3 text-white/85 text-lg max-w-2xl">Hintergründe zu Training, Prävention und Krankenkassen-Erstattung — geschrieben von Therapeut:innen, nicht von Marketing.</p>
           </div>
           <a href="/wissen/" class="text-sm font-semibold text-brand-500 hover:text-brand-400">Alle Artikel →</a>
@@ -1067,7 +1145,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
 
         <div class="mt-6 md:mt-12 flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-4 px-4 pb-4 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:-mx-0 md:px-0 md:pb-0" style="scrollbar-width:none">
 
-          <a href="/wissen/funktionelles-training-was-ist-das" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
+          <a href="/wissen/funktionelles-training-was-ist-das" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
             <div class="aspect-[16/10] overflow-hidden">
               <img src="img/kraft-1200.jpg" alt="Funktionelles Training im Health Club Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
@@ -1079,7 +1157,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </a>
 
-          <a href="/wissen/zpp-praeventionskurs-krankenkasse-erstattung" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
+          <a href="/wissen/zpp-praeventionskurs-krankenkasse-erstattung" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
             <div class="aspect-[16/10] overflow-hidden">
               <img src="img/community-1200.jpg" alt="ZPP-zertifizierter Präventionskurs in Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
@@ -1091,7 +1169,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </a>
 
-          <a href="/wissen/pilates-vs-yoga-was-passt-zu-dir" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
+          <a href="/wissen/pilates-vs-yoga-was-passt-zu-dir" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
             <div class="aspect-[16/10] overflow-hidden">
               <img src="img/standorte/friedrich-ebert-122/hero-matten.jpg" alt="Pilates auf der Matte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
@@ -1103,7 +1181,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </a>
 
-          <a href="/wissen/krafttraining-ab-50" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
+          <a href="/wissen/krafttraining-ab-50" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
             <div class="aspect-[16/10] overflow-hidden">
               <img src="img/senior-1200.jpg" alt="Krafttraining ab 50 in Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
@@ -1115,7 +1193,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </a>
 
-          <a href="/wissen/mobility-warum-beweglichkeit-zaehlt" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
+          <a href="/wissen/mobility-warum-beweglichkeit-zaehlt" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
             <div class="aspect-[16/10] overflow-hidden">
               <img src="img/standorte/friedrich-ebert-122/gallery-01-kursraum.jpg" alt="Mobility-Training im Health Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
@@ -1127,7 +1205,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
             </div>
           </a>
 
-          <a href="/wissen/rueckenschmerzen-vorbeugen-uebungen" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
+          <a href="/wissen/rueckenschmerzen-vorbeugen-uebungen" class="group rounded-2xl bg-white ring-1 ring-ink-100 overflow-hidden shadow-card card-hover flex flex-col flex-none w-[88%] snap-start md:w-auto md:flex-1 hover:ring-brand-500/40 hover:shadow-lg transition">
             <div class="aspect-[16/10] overflow-hidden">
               <img src="img/standorte/friedrich-ebert-122/gallery-05-powerbar.jpg" alt="Rückenfit-Training in Münster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
@@ -1148,8 +1226,8 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
          ========================================= -->
     <section id="faq" class="bg-forest-700 text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
-        <p class="eyebrow text-sm text-brand-500">Häufige Fragen</p>
-        <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Alles, was du wissen musst.</h2>
+        <p data-reveal class="eyebrow text-sm text-brand-500">Häufige Fragen</p>
+        <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Alles, was du wissen musst.</h2>
 
         <div class="mt-10 space-y-3">
           <details open class="group rounded-xl bg-white ring-1 ring-ink-100 p-5 shadow-card">
@@ -1222,7 +1300,7 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
           <!-- Linke Spalte: Headline & schnelle Wege -->
           <div>
             <p class="text-sm font-semibold uppercase tracking-widest text-brand-500">Probestunde sichern</p>
-            <h2 class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Komm vorbei. Trainier mit uns. Unverbindlich.</h2>
+            <h2 data-reveal class="display mt-3 text-2xl sm:text-3xl md:text-4xl">Komm vorbei. Trainier mit uns. Unverbindlich.</h2>
             <p class="mt-5 text-lg text-white/85 max-w-xl">Wähle deinen Wunschkurs und sichere dir einen kostenfreien Probetermin. Wir melden uns innerhalb von 24 Stunden bei dir.</p>
             <ul class="mt-7 grid sm:grid-cols-1 gap-2 text-white/90 max-w-md text-sm">
               <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> Termin in 24 h — wir melden uns bei dir</li>
@@ -1384,6 +1462,26 @@ gtag('config', 'G-C75C9ZMSEJ', { anonymize_ip: true });
       menu.querySelectorAll('a[href^="#"]').forEach(function(a){
         a.addEventListener('click', function(){ setOpen(false); });
       });
+    })();
+
+    // Scroll-Reveal-Animationen (Intersection Observer)
+    (function(){
+      if (!('IntersectionObserver' in window)) {
+        // Fallback: alle Elemente sofort sichtbar
+        document.querySelectorAll('[data-reveal]').forEach(function(el){
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
     })();
 
     // Google-Maps Consent-Wrapper
